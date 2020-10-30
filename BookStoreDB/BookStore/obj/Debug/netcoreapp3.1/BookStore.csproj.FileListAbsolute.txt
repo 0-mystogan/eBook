@@ -161,9 +161,6 @@ C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\bin\Debug\netcoreapp
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csprojAssemblyReference.cache
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfoInputs.cache
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfo.cs
-C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
-C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.RazorTargetAssemblyInfo.cache
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CopyComplete
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\staticwebassets\BookStore.StaticWebAssets.Manifest.cache
@@ -171,3 +168,6 @@ C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.dll
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.genruntimeconfig.cache
+C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
+C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cache
