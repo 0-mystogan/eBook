@@ -1,4 +1,5 @@
 using BookStore.Dal.Context;
+using BookStore.Dal.Repositories;
 using BookStore.Dal.ViewModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +29,7 @@ namespace BookStore
 
             services.AddScoped<IUserRepository, SqlServerUserRepository>();
             services.AddScoped<IOrderRepository, SqlServerOrderRepository>();
+            services.AddScoped<IBookRepository, SqlServerBookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,6 +12,11 @@ namespace BookStore.Dal.ViewModel
             throw new NotImplementedException();
         }
 
+        public Category Get(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public Category Remove(Category entity)
         {
             throw new NotImplementedException();
