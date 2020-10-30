@@ -1,0 +1,12 @@
+<div class="bg">
+   <div class="container">
+   <div class="centered">
+      <h3 class="h3">Welcome to eBook</h3>
+      <p>Enoy quarantine</p>
+      <div *ngIf="userService.user.firstname == ''">
+         <a routerLink="/register" class="btn text-white font-weight-bold">Register</a>  |   <a class="btn text-white font-weight-bold" (click)="openForm(true)">Login</a>
+         <app-login *ngIf="click" (eventEmitter)="openForm($event)"></app-login>
+      </div>
+   </div>
+   </div>
+</div>

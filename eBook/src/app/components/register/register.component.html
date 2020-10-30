@@ -1,0 +1,26 @@
+
+<div class="container">
+   <h3>Register</h3>
+   <form (ngSubmit)="onSubmit()">
+     <div class="form-group">
+         <label>First name</label>
+         <input class="form-control" type="text" name="firstname" [(ngModel)] = "firstname"placeholder="First name">
+     </div>
+     <div class="form-group">
+      <label>Last name</label>
+      <input class="form-control" type="text" name="lastname" [(ngModel)] = "lastname" placeholder="Last name">
+  </div>
+  <div class="form-group">
+   <label>Email</label>
+   <input class="form-control" type="email" name="email" [(ngModel)] = "email" placeholder="Email">
+</div>
+<div class="form-group">
+   <label>Password</label>
+   <input class="form-control" type="password" name="password" [(ngModel)] = "password" placeholder="Password">
+   <input class="form-control" type="password" name="password2" [(ngModel)] = "password2" placeholder="Type your password again">
+</div>
+
+      <input type="submit" value="Submit" class="btn">
+   </form>
+
+</div>

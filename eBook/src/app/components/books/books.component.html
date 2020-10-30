@@ -1,0 +1,27 @@
+<div class="grid">
+   <ul *ngFor="let book of books" class = "card promoting-card">
+      <div class="card-body d-flex flex-row">
+         <div>
+         <h4 class="card-title font-weight-bold mb-2">
+            {{book.name}}
+         </h4>
+         <p class="card-text"><i class="far fa-clock pr-2"></i>{{book.relacedate}}</p>
+         <small class="text-muted mouse" (click)="showItem(book)">Show More</small>
+      </div>
+      </div>
+      <div class="view overlay">
+         <img src={{book.picture}} alt={{book.name}} class="card-img-top rounded-0">
+         <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+      </div>
+      <div class="card-body">
+         <div class="collapse-content">
+         <book-item *ngIf="isShow && book == showBook" [book]="book">{{book.description}}</book-item>
+
+         </div>
+
+      </div>
+
+   </ul>
+</div>

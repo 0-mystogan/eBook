@@ -1,0 +1,41 @@
+<div>
+   <div class="container">
+
+       <!-- Profile widget -->
+       <div class="bg-white shadow rounded overflow-hidden">
+           <div class="bg-dark">
+               <div class="media align-items-end profile-header">
+                   <div class="profile mr-3"><img *ngIf="userService.user.picture != ''" src="{{userService.user.picture}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a><a href="#" class="btn btn-danger btn-sm btn-block" (click)="logOut()">Log out</a></div>
+                   <div class="media-body mb-5 text-white">
+                       <h4 class="mt-0 mb-0 text-dark">{{userService.user.firstname}}  {{userService.user.lastname}}</h4>
+                   </div>
+               </div>
+           </div>
+
+           <div class="bg-light p-4 d-flex justify-content-end text-center">
+               <ul class="list-inline mb-0">
+                   <li class="list-inline-item">
+                       <h5 class="font-weight-bold mb-0 d-block">{{userService.user.books.length}}</h5><small class="text-muted"> <i class="fa fa-cart-plus mr-1"></i>Cart</small>
+                   </li>
+                   <li class="list-inline-item">
+                       <h5 class="font-weight-bold mb-0 d-block">{{userService.user.orders.length}}</h5><small class="text-muted"> <i class="fa fa-book mr-1"></i>Ordered</small>
+                   </li>
+               </ul>
+           </div>
+
+           <div class="py-4 px-4">
+               <div class="d-flex align-items-center justify-content-between mb-3">
+                   <h5 class="mb-0">Cart</h5><a  class="btn btn-link text-muted">Show all</a>
+                   <div *ngFor="let book of userService.user.books">
+                       {{book.name}}
+                   </div>
+               </div>
+               <div class="py-4">
+                   <h5 class="mb-3">Ordered</h5>
+                   
+               </div>
+           </div>
+       </div><!-- End profile widget -->
+
+   </div>
+</div>
