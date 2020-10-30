@@ -20,6 +20,21 @@ namespace BookStore.Dal.Configuration
             builder.Property(p => p.Image);
             builder.Property(p => p.Quantity);
 
+            builder
+                .HasMany(ub => ub.Carts)
+                .WithOne(b => b.Book)
+                .HasForeignKey(b => b.BookId);
+
+            builder
+                .HasMany(o => o.Orders)
+                .WithOne(b => b.Book)
+                .HasForeignKey(b => b.BookId);
+
+            builder
+                .HasMany(o => o.BookCategories)
+                .WithOne(b => b.Book)
+                .HasForeignKey(b => b.BookId);
+
             builder.HasData(new List<Book> {
                 new Book
                 {

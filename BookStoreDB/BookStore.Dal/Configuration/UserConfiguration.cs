@@ -11,6 +11,7 @@ namespace BookStore.Dal.Configuration
         public override void Configure(EntityTypeBuilder<User> builder)
         {
             base.Configure(builder);
+
             builder.HasKey(p => p.Id);
             builder.Property(p => p.FirstName).IsRequired(true);
             builder.Property(p => p.LastName).IsRequired(true);
@@ -18,6 +19,16 @@ namespace BookStore.Dal.Configuration
             builder.Property(p => p.Password).IsRequired(true);
             builder.Property(p => p.Address).IsRequired(true);
             builder.Property(p => p.IsAdmin);
+
+            builder
+                .HasMany(ub => ub.Carts)
+                .WithOne(u => u.User)
+                .HasForeignKey(u => u.UserId);
+
+            builder
+                .HasMany(o => o.Orders)
+                .WithOne(u => u.User)
+                .HasForeignKey(u => u.UserId);
 
             builder.HasData(new List<User>
             {

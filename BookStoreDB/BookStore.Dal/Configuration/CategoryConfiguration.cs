@@ -13,6 +13,11 @@ namespace BookStore.Dal.Configuration
             builder.HasKey(p => p.Id);
 
             builder.Property(p => p.Name);
+
+            builder
+                .HasMany(b => b.BookCategories)
+                .WithOne(c => c.Category)
+                .HasForeignKey(b => b.CategoryId);
         }
     }
 }

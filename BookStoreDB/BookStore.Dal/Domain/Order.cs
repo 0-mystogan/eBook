@@ -15,7 +15,7 @@ namespace BookStore.Domain
         public Book Book { get; set; }
 
         public DateTime Date { get; set; }
-        public int Quatity { get; set; }
+        public int Quantity { get; set; }
         public decimal Total { get; set; }
         public string PaymantMethod { get; set; }
     }

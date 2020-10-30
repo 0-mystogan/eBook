@@ -14,12 +14,12 @@ namespace BookStore.Dal.Configuration
             builder.HasKey(p => new { p.BookId, p.CategoryId });
 
             builder
-                .HasOne<Book>(p => p.Book)
+                .HasOne(p => p.Book)
                 .WithMany(p => p.BookCategories)
                 .HasForeignKey(p => p.BookId);
 
             builder
-               .HasOne<Category>(p => p.Category)
+               .HasOne(p => p.Category)
                .WithMany(p => p.BookCategories)
                .HasForeignKey(p => p.CategoryId);
         }

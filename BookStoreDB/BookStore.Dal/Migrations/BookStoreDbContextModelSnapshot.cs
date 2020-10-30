@@ -19,7 +19,7 @@ namespace BookStore.Dal.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BookStore.Dal.Domain.UserBook", b =>
+            modelBuilder.Entity("BookStore.Dal.Domain.Cart", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,17 +38,11 @@ namespace BookStore.Dal.Migrations
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Quatity")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("isCart")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("isWhishList")
-                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -56,7 +50,7 @@ namespace BookStore.Dal.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserBooks");
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Book", b =>
@@ -110,7 +104,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 1,
                             Author = "Neki_autor1",
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 836, DateTimeKind.Utc).AddTicks(1731),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 124, DateTimeKind.Utc).AddTicks(4248),
                             CreatedBy = "jasirbuirc",
                             Currrency = "BAM",
                             Description = "Dobar Roman",
@@ -123,7 +117,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 2,
                             Author = "Neki_autor2",
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 836, DateTimeKind.Utc).AddTicks(8131),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 124, DateTimeKind.Utc).AddTicks(9759),
                             CreatedBy = "jasirbuirc",
                             Currrency = "BAM",
                             Description = "Knjiga za svaki uzrast",
@@ -136,7 +130,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 3,
                             Author = "Neki_autor3",
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 836, DateTimeKind.Utc).AddTicks(8257),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 124, DateTimeKind.Utc).AddTicks(9840),
                             CreatedBy = "jasirbuirc",
                             Currrency = "BAM",
                             Description = "Dobar Roman",
@@ -212,7 +206,7 @@ namespace BookStore.Dal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Quatity")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Total")
@@ -234,40 +228,40 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 1,
                             BookId = 2,
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 844, DateTimeKind.Utc).AddTicks(4648),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 136, DateTimeKind.Utc).AddTicks(4696),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
-                            Quatity = 2,
+                            Quantity = 2,
                             Total = 38m,
-                            UserId = 5
+                            UserId = 2
                         },
                         new
                         {
                             Id = 2,
                             BookId = 2,
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 844, DateTimeKind.Utc).AddTicks(8490),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 136, DateTimeKind.Utc).AddTicks(8180),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
-                            Quatity = 1,
+                            Quantity = 1,
                             Total = 19m,
-                            UserId = 5
+                            UserId = 2
                         },
                         new
                         {
                             Id = 3,
                             BookId = 1,
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 844, DateTimeKind.Utc).AddTicks(8552),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 136, DateTimeKind.Utc).AddTicks(8240),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
-                            Quatity = 2,
+                            Quantity = 2,
                             Total = 10m,
-                            UserId = 2
+                            UserId = 1
                         });
                 });
 
@@ -320,7 +314,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 1,
                             Address = "Gorazdanska 96",
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 851, DateTimeKind.Utc).AddTicks(6406),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 141, DateTimeKind.Utc).AddTicks(2527),
                             CreatedBy = "jasirburic",
                             Email = "jasir.buric@edu.fit.ba",
                             FirstName = "Jasir",
@@ -333,7 +327,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 2,
                             Address = "Halkici 23",
-                            CreatedAt = new DateTime(2020, 10, 30, 8, 39, 11, 851, DateTimeKind.Utc).AddTicks(6695),
+                            CreatedAt = new DateTime(2020, 10, 30, 17, 22, 16, 141, DateTimeKind.Utc).AddTicks(2640),
                             CreatedBy = "jasirburic",
                             Email = "muhamed.halkic@edu.fit.ba",
                             FirstName = "Muhamed",
@@ -344,16 +338,16 @@ namespace BookStore.Dal.Migrations
                         });
                 });
 
-            modelBuilder.Entity("BookStore.Dal.Domain.UserBook", b =>
+            modelBuilder.Entity("BookStore.Dal.Domain.Cart", b =>
                 {
                     b.HasOne("BookStore.Domain.Book", "Book")
-                        .WithMany("UserBooks")
+                        .WithMany("Carts")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BookStore.Domain.User", "User")
-                        .WithMany("UserBooks")
+                        .WithMany("Carts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

@@ -16,7 +16,7 @@ namespace BookStore.Dal.ViewModel
         {
             BookId = order.BookId;
             UserId = order.UserId;
-            Quantity = order.Quatity;
+            Quantity = order.Quantity;
             Total = order.Total;
             PaymantMethod = order.PaymantMethod;
         }

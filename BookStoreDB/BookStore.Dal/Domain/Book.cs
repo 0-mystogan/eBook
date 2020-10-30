@@ -13,8 +13,8 @@ namespace BookStore.Domain
         public string Author { get; set; }
         public byte[] Image { get; set; }
         public int Quantity { get; set; }
-        public List<BookCategory> BookCategories { get; set; }
-        public List<Order> Orders { get; set; }
-        public List<UserBook> UserBooks { get; set; }
+        public IList<BookCategory> BookCategories { get; set; }
+        public IList<Order> Orders { get; set; }
+        public IList<Cart> Carts { get; set; }
     }
 }
