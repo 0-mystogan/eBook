@@ -39,35 +39,101 @@ namespace BookStore.Dal.Configuration
                 new Book
                 {
                     Id = 1,
-                    CreatedBy = "jasirbuirc",
-                    Name = "Orlovi rano lete",
-                    Price = 5,
+                    CreatedBy = "jasirburic",
+                    Name = "Vjenčanje",
+                    Author = "Julie Garwood",
+                    Price = 22,
                     Currrency = "BAM",
-                    Description = "Dobar Roman",
-                    Author = "Neki_autor1",
-                    Quantity = 13
+                    Quantity = 13,
+                    Description = "Roman Vjenčanje nezaboravna je ljubavna priča puna strasti i uzbudljivih intriga iz pera nenadmašne Julie Garwood. Putujući iz Engleske u Škotsku kako bi se udala."
                 },
                  new Book
                 {
-                     Id = 2,
-                    CreatedBy = "jasirbuirc",
-                    Name = "Odgoj dijece u islamu",
-                    Price = 19,
+                    Id = 2,
+                    CreatedBy = "jasirburic",
+                    Name = "Mi protiv vas",
+                    Author = "Fredrik Bakman",
+                    Price = 20,
                     Currrency = "BAM",
-                    Description = "Knjiga za svaki uzrast",
-                    Author = "Neki_autor2",
-                    Quantity = 7
+                    Quantity = 13,
+                    Description = "Ponekad je tako jednostavno potaći ljude da mrze jedni druge da je prosto neshvatljivo kako bilo šta drugo i radimo. Nakon užasnih zbivanja koja su potresla Medvjedgrad."
                 },
                   new Book
                 {
                     Id = 3,
-                    CreatedBy = "jasirbuirc",
-                    Name = "Zeleno busenje",
-                    Price = 7,
+                    CreatedBy = "jasirburic",
+                    Name = "Životinja srca",
+                    Author = "Herta Miler",
+                    Price = 15,
                     Currrency = "BAM",
-                    Description = "Dobar Roman",
-                    Author = "Neki_autor3",
-                    Quantity = 9
+                    Quantity = 13,
+                    Description = "Dobitnica Nobelove nagrade. Lolino samoubistvo, koje je možda i ubistvo, povezuje četvoro mladih ljudi. Između njih se razvija neraskidivo prijateljstvo."
+                },
+                  new Book
+                {
+                    Id = 4,
+                    CreatedBy = "jasirburic",
+                    Name = "Živim tiho",
+                    Author = "Fadil Duranović",
+                    Price = 15,
+                    Currrency = "BAM",
+                    Quantity = 13,
+                    Description = "Fadil Duranović se suočio sa sobom i svijetom, a potom zatočen slikom i međusobnim odnosom, pjesnički osvijestio svoju komunikaciju."
+                },
+                  new Book
+                {
+                    Id = 5,
+                    CreatedBy = "jasirburic",
+                    Name = "Časovničareva kći",
+                    Author = "Kejt Morton",
+                    Price = 26,
+                    Currrency = "BAM",
+                    Quantity = 13,
+                    Description = "Mog pravog imena niko se ne seća. Istinu o tom letu niko ne zna. U leto 1862. grupa mladih umetnika na čelu sa talentovanim Edvardom Redklifom."
+                },
+                  new Book
+                {
+                    Id = 6,
+                    CreatedBy = "jasirburic",
+                    Name = "Tuđa pravila",
+                    Author = "Džon Irving",
+                    Price = 30,
+                    Currrency = "BAM",
+                    Quantity = 13,
+                    Description = "Radnja ovog romana odvija se u ruralnim krajevima Nove Engleske u prvoj polovini dvadesetog veka. To je priča o doktoru Vilburu Larču."
+                },
+                  new Book
+                {
+                    Id = 7,
+                    CreatedBy = "jasirburic",
+                    Name = "Garavi sokak",
+                    Author = "Miroslav Antić",
+                    Price = 16,
+                    Currrency = "BAM",
+                    Quantity = 13,
+                    Description = "Veselo cigansko vašarište sa nekoliko suza i kapi kiše Miroslav Antić posvećuje ovu knjigu mladom Ciganinu Miletu Dileji, koga su fašisti jedne noći odveli."
+                },
+                  new Book
+                {
+                    Id = 8,
+                    CreatedBy = "jasirburic",
+                    Name = "Ime ruže",
+                    Author = "Umberto Eko",
+                    Price = 15,
+                    Currrency = "BAM",
+                    Quantity = 13,
+                    Description = "Jedan od temeljnih postmodernističkih romana o fatalnom dejstvu jedne zabranjene knjige smješten je u godinu 1327. Franjevački monasi u bogatoj italijanskoj opatiji."
+                },
+                  new Book
+                {
+                    Id = 9,
+                    CreatedBy = "jasirburic",
+                    Name = "Medvjedgrad",
+                    Author = "Fredrik Bakman",
+                    Price = 20,
+                    Currrency = "BAM",
+                    Quantity = 13,
+                    Description = "Roman Medvjedgrad prvi je dio autorove duologije o problemima što ih donosi život u maloj zajednici. Problemima što ih se lako može preslikati i na šire i veće zajednice."
                 },
             });
         }
