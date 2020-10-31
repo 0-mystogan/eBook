@@ -1,9 +1,10 @@
 export interface Book {
    id : number,
-   picture : string,
-   relacedate : string,
    name : string,
+   author: string,
    description: string,
    price: number,
-   author: string;
+   currrency: string,
+   image : string,
+   quantity: number
 }
