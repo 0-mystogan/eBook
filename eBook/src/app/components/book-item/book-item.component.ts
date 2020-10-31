@@ -16,21 +16,13 @@ export class BookItemComponent implements OnInit {
   constructor(private booksService: BooksService, private route: ActivatedRoute) {
   }
 
-  
-
   ngOnInit(): void {
     this.getBook();
-    console.log(this.book);
   }
 
   getBook() {
-    console.log(this.route.snapshot.params['id']);
-    this.booksService.getBook(+this.route.snapshot.params['id']).subscribe(
-      data => 
-        {this.book = data.book
-        });
-
-
+    console.log(+this.route.snapshot.params['id']);
+    this.booksService.getBook(+this.route.snapshot.params['id']).subscribe(data => this.book = data.book);
   }
 
   addCart(book: Book) {

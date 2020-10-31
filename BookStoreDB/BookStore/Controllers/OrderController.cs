@@ -16,12 +16,20 @@ namespace BookStore.Controllers
         {
             _orderRepository = orderRepository;
         }
+
         [HttpGet]
-        public async Task<IActionResult> Get([FromBody] int id)
+        public async Task<IActionResult> Get([FromBody] UserDto user)
         {
-            var orders = await _orderRepository.GetOrders(id);
+            var orders = await _orderRepository.GetOrders(user);
             return Ok(orders);
             
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add([FromBody] OrderDto order)
+        {
+            var orders = await _orderRepository.AddOrder(order);
+            return Ok(orders);
         }
     }
 }

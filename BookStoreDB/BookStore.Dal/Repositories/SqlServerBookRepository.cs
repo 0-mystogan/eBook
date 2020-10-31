@@ -18,6 +18,24 @@ namespace BookStore.Dal.Repositories
         {
             _bookStoreDbContext = bookStoreDbContext;
         }
+
+        public async Task<BookViewModel> Add(BookDto book, CancellationToken cancellationToken = default)
+        {
+            var bookDomain = new Book
+            {
+                Name = book.Name,
+                Author = book.Author,
+                Description = book.Description,
+                Price = book.Price,
+                Currrency = book.Currrency,
+                Image = book.Image,
+                Quantity = book.Quantity
+            };
+            await _bookStoreDbContext.Books.AddAsync(bookDomain, cancellationToken);
+            await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
+            return new BookViewModel(bookDomain);
+        }
+
         public async Task<BookViewModel> GetById(int id, CancellationToken cancellationToken = default)
         {
             var book = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);

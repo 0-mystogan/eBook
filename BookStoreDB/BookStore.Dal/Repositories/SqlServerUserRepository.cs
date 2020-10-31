@@ -15,7 +15,6 @@ namespace BookStore.Dal.ViewModel
     public class SqlServerUserRepository : IUserRepository
     {
         private readonly BookStoreDbContext _bookStoreDbContext;
-        private static SqlServerOrderRepository _orderRepository;
         public SqlServerUserRepository(BookStoreDbContext bookStoreDbContext)
         {
             _bookStoreDbContext = bookStoreDbContext;

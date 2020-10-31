@@ -7,6 +7,10 @@ namespace BookStore.Dal.ViewModel
 {
     public class BookDto
     {
+        public BookDto()
+        {
+
+        }
         public BookDto(Book book)
         {
             Id = book.Id;
@@ -14,6 +18,7 @@ namespace BookStore.Dal.ViewModel
             Author = book.Author;
             Description = book.Description;
             Price = book.Price;
+            Currrency = book.Currrency;
             Quantity = book.Quantity;
             Image = book.Image;
         }

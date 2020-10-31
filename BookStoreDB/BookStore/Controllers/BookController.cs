@@ -28,5 +28,12 @@ namespace BookStore.Controllers
             var book = await _bookRepository.GetById(id);
             return Ok(book);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Add([FromBody] BookDto book)
+        {
+            var newBook = await _bookRepository.Add(book);
+            return Ok(newBook);
+        }
     }
 }
