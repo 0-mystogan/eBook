@@ -11,5 +11,6 @@ namespace BookStore.Dal.ViewModel
     {
         Task<BookViewModel> GetTopTen(CancellationToken cancellationToken = default);
         Task<BookViewModel> GetById(int id, CancellationToken cancellationToken = default);
+        Task<BookViewModel> Add(BookDto book, CancellationToken cancellationToken = default);
     }
 }
