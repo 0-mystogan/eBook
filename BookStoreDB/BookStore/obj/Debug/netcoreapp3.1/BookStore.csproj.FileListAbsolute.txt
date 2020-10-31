@@ -171,3 +171,11 @@ I:\InfinityMesh\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.dl
 I:\InfinityMesh\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
 I:\InfinityMesh\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.genruntimeconfig.cache
 I:\InfinityMesh\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csprojAssemblyReference.cache
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfoInputs.cache
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfo.cs
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.dll
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
