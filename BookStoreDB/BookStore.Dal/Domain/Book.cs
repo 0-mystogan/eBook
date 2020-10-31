@@ -11,7 +11,7 @@ namespace BookStore.Domain
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string Currrency { get; set; }
-        public byte[] Image { get; set; }
+        public string  Image { get; set; }
         public int Quantity { get; set; }
         public IList<BookCategory> BookCategories { get; set; }
         public IList<Order> Orders { get; set; }

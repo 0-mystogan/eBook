@@ -18,7 +18,6 @@ export class BookItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBook();
-    console.log(this.book);
   }
 
   getBook() {
