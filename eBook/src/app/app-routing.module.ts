@@ -21,7 +21,7 @@ const routes: Routes = [
       path: 'profile', component: ProfileComponent
    },
    {
-      path: 'books/getbyid/:id', component: BookItemComponent
+      path: 'book/:id', component: BookItemComponent
    }
 ];
 

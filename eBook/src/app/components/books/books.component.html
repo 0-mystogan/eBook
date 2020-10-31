@@ -1,6 +1,6 @@
 <div class="grid">
    <ul *ngFor="let book of books" class="card promoting-card">
-      <div class="card-body d-flex flex-row" routerLink="/books/getbyid/{{book.id}}">
+      <div class="card-body d-flex flex-row" routerLink="/book/{{book.id}}">
          <div>
             <h4 class="card-title font-weight-bold mb-2">
                {{book.name}}
