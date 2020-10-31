@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace BookStore.Domain
 {
     public class User : BaseEntity
-    { 
+    {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -16,6 +16,11 @@ namespace BookStore.Domain
         public bool IsAdmin { get; set; }
         public List<UserBook> UserBooks { get; set; }
         public List<Order> Orders { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName.ToLower()}{LastName.ToLower()}";
+        }
     }
     
 }

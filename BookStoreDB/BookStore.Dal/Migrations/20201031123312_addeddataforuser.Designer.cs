@@ -4,14 +4,16 @@ using BookStore.Dal.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookStore.Dal.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201031123312_addeddataforuser")]
+    partial class addeddataforuser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -110,7 +112,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 1,
                             Author = "Neki_autor1",
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 388, DateTimeKind.Utc).AddTicks(9313),
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 204, DateTimeKind.Utc).AddTicks(5497),
                             CreatedBy = "jasirbuirc",
                             Currrency = "BAM",
                             Description = "Dobar Roman",
@@ -123,7 +125,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 2,
                             Author = "Neki_autor2",
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 389, DateTimeKind.Utc).AddTicks(8219),
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 205, DateTimeKind.Utc).AddTicks(4340),
                             CreatedBy = "jasirbuirc",
                             Currrency = "BAM",
                             Description = "Knjiga za svaki uzrast",
@@ -136,7 +138,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 3,
                             Author = "Neki_autor3",
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 389, DateTimeKind.Utc).AddTicks(8336),
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 205, DateTimeKind.Utc).AddTicks(4458),
                             CreatedBy = "jasirbuirc",
                             Currrency = "BAM",
                             Description = "Dobar Roman",
@@ -233,34 +235,34 @@ namespace BookStore.Dal.Migrations
                         new
                         {
                             Id = 1,
-                            BookId = 1,
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 398, DateTimeKind.Utc).AddTicks(7306),
+                            BookId = 2,
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 213, DateTimeKind.Utc).AddTicks(7275),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
                             Quatity = 2,
                             Total = 38m,
-                            UserId = 7
+                            UserId = 5
                         },
                         new
                         {
                             Id = 2,
-                            BookId = 1,
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 399, DateTimeKind.Utc).AddTicks(2232),
+                            BookId = 2,
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 214, DateTimeKind.Utc).AddTicks(2232),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
                             Quatity = 1,
                             Total = 19m,
-                            UserId = 7
+                            UserId = 5
                         },
                         new
                         {
                             Id = 3,
-                            BookId = 2,
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 399, DateTimeKind.Utc).AddTicks(2320),
+                            BookId = 1,
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 214, DateTimeKind.Utc).AddTicks(2315),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -320,7 +322,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 1,
                             Address = "Gorazdanska 96",
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 407, DateTimeKind.Utc).AddTicks(3158),
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 222, DateTimeKind.Utc).AddTicks(2542),
                             CreatedBy = "jasirburic",
                             Email = "jasir.buric@edu.fit.ba",
                             FirstName = "Jasir",
@@ -333,7 +335,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 2,
                             Address = "Halkici 23",
-                            CreatedAt = new DateTime(2020, 10, 31, 12, 37, 14, 407, DateTimeKind.Utc).AddTicks(3316),
+                            CreatedAt = new DateTime(2020, 10, 31, 12, 33, 11, 222, DateTimeKind.Utc).AddTicks(2700),
                             CreatedBy = "jasirburic",
                             Email = "muhamed.halkic@edu.fit.ba",
                             FirstName = "Muhamed",

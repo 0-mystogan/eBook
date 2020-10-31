@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "I:\\BookStore\\BookStoreDB\\BookStore\\BookStore.csproj": {}
+    "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "I:\\BookStore\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
+    "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\BookStore\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
+        "projectUniqueName": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
         "projectName": "BookStore.Dal",
-        "projectPath": "I:\\BookStore\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
+        "projectPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
         "packagesPath": "C:\\Users\\yasir\\.nuget\\packages\\",
-        "outputPath": "I:\\BookStore\\BookStoreDB\\BookStore.Dal\\obj\\",
+        "outputPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yasir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "I:\\BookStore\\BookStoreDB\\BookStore\\BookStore.csproj": {
+    "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\BookStore\\BookStoreDB\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "I:\\BookStore\\BookStoreDB\\BookStore\\BookStore.csproj",
+        "projectPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj",
         "packagesPath": "C:\\Users\\yasir\\.nuget\\packages\\",
-        "outputPath": "I:\\BookStore\\BookStoreDB\\BookStore\\obj\\",
+        "outputPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yasir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "I:\\BookStore\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
-                "projectPath": "I:\\BookStore\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj"
+              "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
+                "projectPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj"
               }
             }
           }

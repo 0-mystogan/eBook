@@ -36,8 +36,8 @@ namespace BookStore.Dal.Configuration
                 new Order
                 {
                     Id = 1,
-                    UserId = 5,
-                    BookId = 2,
+                    UserId = 7,
+                    BookId = 1,
                     CreatedBy = "jasirbuirc",
                     Quatity = 2,
                     Total = 38,
@@ -46,8 +46,8 @@ namespace BookStore.Dal.Configuration
                  new Order
                 {
                     Id = 2,
-                    UserId = 5,
-                    BookId = 2,
+                    UserId = 7,
+                    BookId = 1,
                     CreatedBy = "jasirbuirc",
                     Quatity = 1,
                     Total = 19,
@@ -57,7 +57,7 @@ namespace BookStore.Dal.Configuration
                 {
                     Id = 3,
                     UserId = 2,
-                    BookId = 1,
+                    BookId = 2,
                     CreatedBy = "jasirbuirc",
                     Quatity = 2,
                     Total = 10,
