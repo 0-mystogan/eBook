@@ -29,7 +29,7 @@ namespace BookStore.Dal.ViewModel
                 User = user,
                 BookId = order.BookId,
                 Book = _bookStoreDbContext.Books.FirstOrDefault(b => b.Id == order.BookId),
-                Quatity = order.Quantity,
+                Quantity = order.Quantity,
                 PaymantMethod = order.PaymantMethod,
                 CreatedBy = _bookStoreDbContext.Users.FirstOrDefault(u => u.Id == order.UserId).ToString()
             };
