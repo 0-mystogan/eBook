@@ -62,7 +62,7 @@ namespace BookStore.Dal.Repositories
         {
             var bookDomain = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == book.Id, cancellationToken);
 
-            bookDomain.Id = bookDomain.Id;
+            bookDomain.Id = book.Id;
             bookDomain.Name = book.Name;
             bookDomain.Author = book.Author;
             bookDomain.Description = book.Description;
