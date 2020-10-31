@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from 'src/app/book.model';
 import { BooksService } from 'src/app/services/books.service';
-import { BOOKS } from '../../books';
+
 
 @Component({
   selector: 'book-item',

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Book } from '../book.model';
-import { BOOKS } from '../books';
 import { Observable } from 'rxjs';
 import { AddBook } from '../add-book.model';
 
@@ -29,7 +28,7 @@ export class BooksService {
     const url = `${this.booksUrl}/add`;
     console.log(book)
     return this.http.post<AddBook>(url, book);
-    
+
   }
 
 }

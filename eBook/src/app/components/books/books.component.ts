@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
 import { Book } from '../../book.model';
-import { BOOKS } from '../../books';
+
 
 @Component({
   selector: 'app-book',
@@ -22,8 +22,8 @@ export class BooksComponent implements OnInit {
   }
 
   getBooks() {
-    this.booksService.getBooks().subscribe(data => 
-    this.books = data.collection);
+    this.booksService.getBooks().subscribe(data =>
+      this.books = data.collection);
   }
 
   showItem(book) {
