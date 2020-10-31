@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
 import { Book } from '../../book.model';
 import { BOOKS } from '../../books';
@@ -9,13 +10,12 @@ import { BOOKS } from '../../books';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
-  @Input() book: Book;
   books: Book[];
   isShow: boolean = false;
   showBook: Book;
 
 
-  constructor(private booksService: BooksService) { }
+  constructor(private booksService: BooksService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getBooks();

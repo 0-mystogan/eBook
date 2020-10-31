@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Book } from 'src/app/book.model';
-import {BOOKS} from '../../books';
+import { BooksService } from 'src/app/services/books.service';
+import { BOOKS } from '../../books';
 
 @Component({
   selector: 'book-item',
@@ -8,19 +10,23 @@ import {BOOKS} from '../../books';
   styleUrls: ['./book-item.component.scss']
 })
 export class BookItemComponent implements OnInit {
-   @Input() book : Book;
+  book: Book;
+  id: number;
 
-  books : Book[] =  BOOKS;
-
-   constructor() { 
-   }
+  constructor(private booksService: BooksService, private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-    
+    this.getBook();
+    console.log(this.book);
   }
 
-  addCart(book : Book){
+  getBook() {
+    this.booksService.getBook(+this.route.snapshot.params['id']).subscribe(data => this.book = data.book);
+  }
+
+  addCart(book: Book) {
     console.log(book);
   }
-    
+
 }

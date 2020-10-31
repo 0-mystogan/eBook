@@ -9,11 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class BooksService {
 
-  private booksUrl = "https://localhost:44375/api/book/get";
+  private booksUrl = "https://localhost:44375/api/book";
 
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]> {
-    return this.http.get<Book[]>(this.booksUrl);
+    const url = `${this.booksUrl}/get`
+    return this.http.get<Book[]>(url);
+  }
+
+  getBook(id: number): Observable<Book> {
+    const url = `${this.booksUrl}/getbyid/${id}`;
+    return this.http.get<Book>(url);
   }
 }

@@ -25,7 +25,7 @@ namespace BookStore.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var book = await _bookRepository.GetById(1);
+            var book = await _bookRepository.GetById(id);
             return Ok(book);
         }
     }
