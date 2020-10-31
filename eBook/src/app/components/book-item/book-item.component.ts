@@ -21,6 +21,7 @@ export class BookItemComponent implements OnInit {
   }
 
   getBook() {
+    console.log(+this.route.snapshot.params['id']);
     this.booksService.getBook(+this.route.snapshot.params['id']).subscribe(data => this.book = data.book);
   }
 
