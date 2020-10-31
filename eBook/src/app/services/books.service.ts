@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book } from '../book.model';
 import { Observable } from 'rxjs';
-import { AddBook } from '../add-book.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   private booksUrl = "https://localhost:44375/api/book";
 
@@ -23,12 +26,9 @@ export class BooksService {
     return this.http.get<Book>(url);
   }
 
-  addBook(book: AddBook): Observable<AddBook> {
-
+  addBook(book: Book): Observable<Book> {
     const url = `${this.booksUrl}/add`;
-    console.log(book)
-    return this.http.post<AddBook>(url, book);
-
+    return this.http.post<Book>(url, book, this.httpOptions);
   }
 
 }

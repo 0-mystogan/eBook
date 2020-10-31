@@ -30,9 +30,9 @@ import { AddBookComponent } from './components/add-book/add-book.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],
