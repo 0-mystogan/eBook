@@ -35,5 +35,12 @@ namespace BookStore.Controllers
             var newBook = await _bookRepository.Add(book);
             return Ok(newBook);
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Remove(int id)
+        {
+            var deleteBook = await _bookRepository.Remove(id);
+            return Ok(deleteBook);
+        }
     }
 }
