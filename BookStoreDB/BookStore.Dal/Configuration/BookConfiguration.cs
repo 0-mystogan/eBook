@@ -69,7 +69,7 @@ namespace BookStore.Dal.Configuration
                     Author = "Herta Miler",
                     Price = 15,
                     Currrency = "BAM",
-                    Quantity = 13,
+                    Quantity = 0,
                     Description = "Dobitnica Nobelove nagrade. Lolino samoubistvo, koje je možda i ubistvo, povezuje četvoro mladih ljudi. Između njih se razvija neraskidivo prijateljstvo."
                 },
                   new Book
@@ -105,7 +105,7 @@ namespace BookStore.Dal.Configuration
                     Author = "Džon Irving",
                     Price = 30,
                     Currrency = "BAM",
-                    Quantity = 13,
+                    Quantity = 0,
                     Description = "Radnja ovog romana odvija se u ruralnim krajevima Nove Engleske u prvoj polovini dvadesetog veka. To je priča o doktoru Vilburu Larču."
                 },
                   new Book
