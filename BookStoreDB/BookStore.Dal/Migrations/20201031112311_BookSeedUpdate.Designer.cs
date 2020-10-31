@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Dal.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    [Migration("20201025160045_dataOrder")]
-    partial class dataOrder
+    [Migration("20201031112311_BookSeedUpdate")]
+    partial class BookSeedUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace BookStore.Dal.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BookStore.Dal.Domain.UserBook", b =>
+            modelBuilder.Entity("BookStore.Dal.Domain.Cart", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,17 +40,11 @@ namespace BookStore.Dal.Migrations
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Quatity")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("isCart")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("isWhishList")
-                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -58,7 +52,7 @@ namespace BookStore.Dal.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserBooks");
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("BookStore.Domain.Book", b =>
@@ -86,8 +80,8 @@ namespace BookStore.Dal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("Image")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2")
@@ -111,41 +105,128 @@ namespace BookStore.Dal.Migrations
                         new
                         {
                             Id = 1,
-                            Author = "Neki_autor1",
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 937, DateTimeKind.Utc).AddTicks(8096),
-                            CreatedBy = "jasirbuirc",
+                            Author = "Julie Garwood",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(1472),
+                            CreatedBy = "jasirburic",
                             Currrency = "BAM",
-                            Description = "Dobar Roman",
+                            Description = "Roman Vjenčanje nezaboravna je ljubavna priča puna strasti i uzbudljivih intriga iz pera nenadmašne Julie Garwood. Putujući iz Engleske u Škotsku kako bi se udala.",
+                            Image = "../../assets/Vjencanje.jpg",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Orlovi rano lete",
-                            Price = 5m,
+                            Name = "Vjenčanje",
+                            Price = 22m,
                             Quantity = 13
                         },
                         new
                         {
                             Id = 2,
-                            Author = "Neki_autor2",
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 938, DateTimeKind.Utc).AddTicks(6703),
-                            CreatedBy = "jasirbuirc",
+                            Author = "Fredrik Bakman",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8763),
+                            CreatedBy = "jasirburic",
                             Currrency = "BAM",
-                            Description = "Knjiga za svaki uzrast",
+                            Description = "Ponekad je tako jednostavno potaći ljude da mrze jedni druge da je prosto neshvatljivo kako bilo šta drugo i radimo. Nakon užasnih zbivanja koja su potresla Medvjedgrad.",
+                            Image = "../../assets/Mi_protiv_vas.jpg",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Odgoj dijece u islamu",
-                            Price = 19m,
-                            Quantity = 7
+                            Name = "Mi protiv vas",
+                            Price = 20m,
+                            Quantity = 13
                         },
                         new
                         {
                             Id = 3,
-                            Author = "Neki_autor3",
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 938, DateTimeKind.Utc).AddTicks(6824),
-                            CreatedBy = "jasirbuirc",
+                            Author = "Herta Miler",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8860),
+                            CreatedBy = "jasirburic",
                             Currrency = "BAM",
-                            Description = "Dobar Roman",
+                            Description = "Dobitnica Nobelove nagrade. Lolino samoubistvo, koje je možda i ubistvo, povezuje četvoro mladih ljudi. Između njih se razvija neraskidivo prijateljstvo.",
+                            Image = "../../assets/Zivotinja_srca.jpg",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Zeleno busenje",
-                            Price = 7m,
-                            Quantity = 9
+                            Name = "Životinja srca",
+                            Price = 15m,
+                            Quantity = 13
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Author = "Fadil Duranović",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8863),
+                            CreatedBy = "jasirburic",
+                            Currrency = "BAM",
+                            Description = "Fadil Duranović se suočio sa sobom i svijetom, a potom zatočen slikom i međusobnim odnosom, pjesnički osvijestio svoju komunikaciju.",
+                            Image = "../../assets/Zivim_tiho.jpg",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Živim tiho",
+                            Price = 15m,
+                            Quantity = 13
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Author = "Kejt Morton",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8866),
+                            CreatedBy = "jasirburic",
+                            Currrency = "BAM",
+                            Description = "Mog pravog imena niko se ne seća. Istinu o tom letu niko ne zna. U leto 1862. grupa mladih umetnika na čelu sa talentovanim Edvardom Redklifom.",
+                            Image = "../../assets/Casovnicareva_kci.jpg",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Časovničareva kći",
+                            Price = 26m,
+                            Quantity = 13
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Author = "Džon Irving",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8872),
+                            CreatedBy = "jasirburic",
+                            Currrency = "BAM",
+                            Description = "Radnja ovog romana odvija se u ruralnim krajevima Nove Engleske u prvoj polovini dvadesetog veka. To je priča o doktoru Vilburu Larču.",
+                            Image = "../../assets/Tudja_pravila.jpg",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Tuđa pravila",
+                            Price = 30m,
+                            Quantity = 13
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Author = "Miroslav Antić",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8874),
+                            CreatedBy = "jasirburic",
+                            Currrency = "BAM",
+                            Description = "Veselo cigansko vašarište sa nekoliko suza i kapi kiše Miroslav Antić posvećuje ovu knjigu mladom Ciganinu Miletu Dileji, koga su fašisti jedne noći odveli.",
+                            Image = "../../assets/Garavi_sokak.jpg",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Garavi sokak",
+                            Price = 16m,
+                            Quantity = 13
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Author = "Umberto Eko",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8876),
+                            CreatedBy = "jasirburic",
+                            Currrency = "BAM",
+                            Description = "Jedan od temeljnih postmodernističkih romana o fatalnom dejstvu jedne zabranjene knjige smješten je u godinu 1327. Franjevački monasi u bogatoj italijanskoj opatiji.",
+                            Image = "../../assets/Ime_ruze.jpg",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ime ruže",
+                            Price = 15m,
+                            Quantity = 13
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Author = "Fredrik Bakman",
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 99, DateTimeKind.Utc).AddTicks(8878),
+                            CreatedBy = "jasirburic",
+                            Currrency = "BAM",
+                            Description = "Roman Medvjedgrad prvi je dio autorove duologije o problemima što ih donosi život u maloj zajednici. Problemima što ih se lako može preslikati i na šire i veće zajednice.",
+                            Image = "../../assets/Medvjedgrad.jpg",
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Medvjedgrad",
+                            Price = 20m,
+                            Quantity = 13
                         });
                 });
 
@@ -186,6 +267,29 @@ namespace BookStore.Dal.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 109, DateTimeKind.Utc).AddTicks(4940),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Roman"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 109, DateTimeKind.Utc).AddTicks(6175),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Drama"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 109, DateTimeKind.Utc).AddTicks(6201),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Poezija"
+                        });
                 });
 
             modelBuilder.Entity("BookStore.Domain.Order", b =>
@@ -214,7 +318,7 @@ namespace BookStore.Dal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Quatity")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Total")
@@ -229,47 +333,47 @@ namespace BookStore.Dal.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             BookId = 2,
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 947, DateTimeKind.Utc).AddTicks(823),
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 115, DateTimeKind.Utc).AddTicks(1122),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
-                            Quatity = 2,
+                            Quantity = 2,
                             Total = 38m,
-                            UserId = 1
+                            UserId = 2
                         },
                         new
                         {
                             Id = 2,
                             BookId = 2,
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 947, DateTimeKind.Utc).AddTicks(5748),
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 115, DateTimeKind.Utc).AddTicks(6417),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
-                            Quatity = 1,
+                            Quantity = 1,
                             Total = 19m,
-                            UserId = 1
+                            UserId = 2
                         },
                         new
                         {
                             Id = 3,
                             BookId = 1,
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 947, DateTimeKind.Utc).AddTicks(5836),
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 115, DateTimeKind.Utc).AddTicks(6509),
                             CreatedBy = "jasirbuirc",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymantMethod = "Paypal",
-                            Quatity = 2,
+                            Quantity = 2,
                             Total = 10m,
-                            UserId = 2
+                            UserId = 1
                         });
                 });
 
@@ -322,7 +426,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 1,
                             Address = "Gorazdanska 96",
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 956, DateTimeKind.Utc).AddTicks(4404),
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 121, DateTimeKind.Utc).AddTicks(3817),
                             CreatedBy = "jasirburic",
                             Email = "jasir.buric@edu.fit.ba",
                             FirstName = "Jasir",
@@ -335,7 +439,7 @@ namespace BookStore.Dal.Migrations
                         {
                             Id = 2,
                             Address = "Halkici 23",
-                            CreatedAt = new DateTime(2020, 10, 25, 16, 0, 44, 956, DateTimeKind.Utc).AddTicks(4576),
+                            CreatedAt = new DateTime(2020, 10, 31, 11, 23, 9, 121, DateTimeKind.Utc).AddTicks(4029),
                             CreatedBy = "jasirburic",
                             Email = "muhamed.halkic@edu.fit.ba",
                             FirstName = "Muhamed",
@@ -346,16 +450,16 @@ namespace BookStore.Dal.Migrations
                         });
                 });
 
-            modelBuilder.Entity("BookStore.Dal.Domain.UserBook", b =>
+            modelBuilder.Entity("BookStore.Dal.Domain.Cart", b =>
                 {
                     b.HasOne("BookStore.Domain.Book", "Book")
-                        .WithMany("UserBooks")
+                        .WithMany("Carts")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BookStore.Domain.User", "User")
-                        .WithMany("UserBooks")
+                        .WithMany("Carts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

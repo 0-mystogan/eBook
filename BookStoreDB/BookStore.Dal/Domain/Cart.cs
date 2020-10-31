@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BookStore.Dal.Domain
 {
-    public class UserBook : BaseEntity
+    public class Cart : BaseEntity
     {
         public int UserId { get; set; }
         public User User { get; set; }
@@ -13,8 +13,6 @@ namespace BookStore.Dal.Domain
         public int BookId { get; set; }
         public Book Book { get; set; }
 
-        public int Quatity { get; set; }
-        public bool isWhishList { get; set; }
-        public bool isCart { get; set; }
+        public int Quantity { get; set; }
     }
 }

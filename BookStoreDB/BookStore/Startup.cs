@@ -1,4 +1,5 @@
 using BookStore.Dal.Context;
+using BookStore.Dal.Repositories;
 using BookStore.Dal.ViewModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,7 @@ namespace BookStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddControllers();
 
             var connectionString = Configuration.GetConnectionString("eBookShop");
@@ -28,6 +30,7 @@ namespace BookStore
 
             services.AddScoped<IUserRepository, SqlServerUserRepository>();
             services.AddScoped<IOrderRepository, SqlServerOrderRepository>();
+            services.AddScoped<IBookRepository, SqlServerBookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +47,15 @@ namespace BookStore
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            app.UseCors(builder =>
+            {
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
+
             app.UseStaticFiles();
 
             app.UseRouting();

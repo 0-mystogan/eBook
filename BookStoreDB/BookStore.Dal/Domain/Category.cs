@@ -10,6 +10,6 @@ namespace BookStore.Domain
     public class Category : BaseEntity
     {
         public string Name { get; set; }
-        public List<BookCategory> BookCategories { get; set; }
+        public IList<BookCategory> BookCategories { get; set; }
     }
 }

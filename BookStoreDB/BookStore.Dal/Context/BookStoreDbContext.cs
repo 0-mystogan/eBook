@@ -15,7 +15,7 @@ namespace BookStore.Dal.Context
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<BookCategory> BookCategories { get; set; }
-        public DbSet<UserBook> UserBooks { get; set; }
+        public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)

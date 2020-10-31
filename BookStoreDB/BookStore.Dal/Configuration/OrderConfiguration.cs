@@ -19,15 +19,15 @@ namespace BookStore.Dal.Configuration
             builder.Property(p => p.CreatedBy);
             builder.Property(p => p.PaymantMethod).IsRequired(true);
             builder.Property(p => p.Total).IsRequired(true);
-            builder.Property(p => p.Quatity).IsRequired(true);
+            builder.Property(p => p.Quantity).IsRequired(true);
 
             builder
-                .HasOne<User>(o => o.User)
+                .HasOne(o => o.User)
                 .WithMany(o => o.Orders)
                 .HasForeignKey(o => o.UserId);
 
             builder
-                .HasOne<Book>(o => o.Book)
+                .HasOne(o => o.Book)
                 .WithMany(o => o.Orders)
                 .HasForeignKey(o => o.BookId);
 
@@ -36,30 +36,30 @@ namespace BookStore.Dal.Configuration
                 new Order
                 {
                     Id = 1,
-                    UserId = 7,
-                    BookId = 1,
+                    UserId = 2,
+                    BookId = 2,
                     CreatedBy = "jasirbuirc",
-                    Quatity = 2,
+                    Quantity = 2,
                     Total = 38,
                     PaymantMethod = "Paypal"
                 },
                  new Order
                 {
                     Id = 2,
-                    UserId = 7,
-                    BookId = 1,
+                    UserId = 2,
+                    BookId = 2,
                     CreatedBy = "jasirbuirc",
-                    Quatity = 1,
+                    Quantity = 1,
                     Total = 19,
                     PaymantMethod = "Paypal"
                 },
                   new Order
                 {
                     Id = 3,
-                    UserId = 2,
-                    BookId = 2,
+                    UserId = 1,
+                    BookId = 1,
                     CreatedBy = "jasirbuirc",
-                    Quatity = 2,
+                    Quantity = 2,
                     Total = 10,
                     PaymantMethod = "Paypal"
                 },

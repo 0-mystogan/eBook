@@ -1,6 +1,3 @@
-<p class="card-text card-text collapse" id="collapseContent">
-   {{book.description}}
-</p>
-<a class="btn btn-flat text-danger p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent">Read more</a>
-<i class="fas fa-book text-muted float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post">  23</i>
-<i class="fas fa-cart-plus text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it" (click)="addCart(book)"></i>
+<div *ngIf="book">
+    <div>{{book.name}}</div>
+</div>
