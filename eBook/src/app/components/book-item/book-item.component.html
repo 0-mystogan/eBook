@@ -1,3 +1,18 @@
 <div *ngIf="book">
-    <div>{{book.name}}</div>
+    <div class="description-container">
+
+        <div class="img-container">
+            <img src="{{book.image}}">
+        </div>
+
+        <div class="text-container">
+            <h1 class="book-name">{{book.name | uppercase}}</h1>
+            <p class="book-description">{{book.description}}</p>
+
+            <div [ngClass]=" book.quantity > 0 ? 'book-quantity' : 'hide' ">Book quantity: {{book.quantity}}</div>
+            <div [ngClass]=" book.quantity == 0 ? 'book-quantity' : 'hide' ">SOLD OUT</div>
+            <p class="book-price">${{book.price}}.00</p>
+        </div>
+
+    </div>
 </div>

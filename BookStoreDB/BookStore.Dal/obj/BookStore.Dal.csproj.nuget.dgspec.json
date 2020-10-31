@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {}
+    "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
+    "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
+        "projectUniqueName": "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
         "projectName": "BookStore.Dal",
-        "projectPath": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
-        "packagesPath": "C:\\Users\\Ohran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\obj\\",
+        "projectPath": "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
+        "packagesPath": "C:\\Users\\mirza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ohran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mirza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

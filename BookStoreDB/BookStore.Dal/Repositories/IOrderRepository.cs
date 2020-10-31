@@ -9,6 +9,7 @@ namespace BookStore.Dal.ViewModel
 {
     public interface IOrderRepository
     {
-        Task<List<Order>> GetOrders(int id, CancellationToken cancellationToken = default);
+        Task<List<OrderViewModel>> GetOrders(UserDto user, CancellationToken cancellationToken = default);
+        Task<List<OrderViewModel>> AddOrder(OrderDto order, CancellationToken cancellationToken = default);
     }
 }

@@ -14,22 +14,19 @@ namespace BookStore.Dal.ViewModel
 
         public UserDto(User user)
         {
+            Id = user.Id;
             FirstName = user.FirstName;
             LastName = user.LastName;
             Email = user.Email;
             Password = user.Password;
             Address = user.Address;
-            foreach (var order in user.Orders)
-            {
-                Orders.Add(new OrderViewModel(order));
-            }
         }
 
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string Address { get; set; }
-        public ICollection<OrderViewModel> Orders { get; set; }
     }
 }

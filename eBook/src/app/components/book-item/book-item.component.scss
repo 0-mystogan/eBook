@@ -1,13 +1,66 @@
-.collapse-content .fa.fa-heart:hover {
-   color: #f44336 !important;
- }
- .collapse-content .fa.fa-share-alt:hover {
-   color: #0d47a1 !important;
- }
- i:hover{
-    cursor: pointer;
- }
- a{
-    outline: none;
-    border: none;
- }
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+// .collapse-content .fa.fa-heart:hover {
+//    color: #f44336 !important;
+//  }
+//  .collapse-content .fa.fa-share-alt:hover {
+//    color: #0d47a1 !important;
+//  }
+//  i:hover{
+//     cursor: pointer;
+//  }
+//  a{
+//     outline: none;
+//     border: none;
+//  }
+
+.description-container{
+   display: flex;
+   height: 90vh;
+   flex-direction: row;
+   background-color: #F7F7F7;
+}
+.img-container{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+      img{
+         height: 400px;
+      }
+}
+.text-container{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   h1{
+      font-family: 'Lora', serif;
+      color: #4D4D4D;
+   }
+   
+   .book-description{
+      text-align: center;
+      margin-top: 20px;
+      width: 70%;
+      font-family: 'Ubuntu', sans-serif;
+      color: #919191;
+      font-size: 14px;
+   }
+   .book-quantity{
+      font-family: 'Lora', serif;
+      color: #919191;
+   }
+   .book-price{
+      font-family: 'Lora', serif;
+      color: #919191;
+   }
+}
+.hide{
+   display: none;
+}

@@ -19,6 +19,7 @@ export const USERS : User[] = [
             the limit and forces him to confront one of Gotham City's oldest evils..`,
             price : 40,
             author : "Scott Snyder"
+
          },
          {
             id : 7,
@@ -27,7 +28,8 @@ export const USERS : User[] = [
             name : "The End of the Day",
             description: `From the New York Times bestselling, Booker-longlisted author of Did You Ever Have a Family 'Fabulously rich and compelling' Daily Mail Following his acclaimed New York Times bestseller, Did You Ever Have a Family, Bill Clegg returns with a profoundly moving, emotionally resonant second novel about the complicated bonds and breaking points of family and friendship.`,
             price : 40,
-            author : "Bill Clegg"
+            author : "Bill Clegg",
+
          },
       ],
       orders:[],
