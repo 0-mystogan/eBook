@@ -1,0 +1,15 @@
+<form >
+
+    <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+   
+    <input type="text" [(ngModel)]="author" [ngModelOptions]="{standalone: true}"> 
+    <input type="text" [(ngModel)]="description" [ngModelOptions]="{standalone: true}"> 
+    <input type="number" [(ngModel)]="price" [ngModelOptions]="{standalone: true}"> 
+    <input type="text" [(ngModel)]="currrency" [ngModelOptions]="{standalone: true}"> 
+    <input type="text" [(ngModel)]="image" [ngModelOptions]="{standalone: true}">
+    <input type="number" [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}"> 
+
+
+    <button (click)="onSubmit()">Submit</button>
+</form>
+

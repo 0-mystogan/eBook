@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Book } from '../book.model';
 import { BOOKS } from '../books';
 import { Observable } from 'rxjs';
+import { AddBook } from '../add-book.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class BooksService {
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]> {
-    const url = `${this.booksUrl}/get`
+    const url = `${this.booksUrl}/get`;
     return this.http.get<Book[]>(url);
   }
 
@@ -22,4 +23,13 @@ export class BooksService {
     const url = `${this.booksUrl}/getbyid/${id}`;
     return this.http.get<Book>(url);
   }
+
+  addBook(book: AddBook): Observable<AddBook> {
+
+    const url = `${this.booksUrl}/add`;
+    console.log(book)
+    return this.http.post<AddBook>(url, book);
+    
+  }
+
 }
