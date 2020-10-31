@@ -42,5 +42,12 @@ namespace BookStore.Controllers
             var deleteBook = await _bookRepository.Remove(id);
             return Ok(deleteBook);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] BookDto book)
+        {
+            await _bookRepository.Update(book);
+            return Ok();
+        }
     }
 }

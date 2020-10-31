@@ -57,5 +57,22 @@ namespace BookStore.Dal.Repositories
             await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
+
+        public async Task Update(BookDto book, CancellationToken cancellationToken = default)
+        {
+            var bookDomain = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == book.Id, cancellationToken);
+
+            bookDomain.Id = bookDomain.Id;
+            bookDomain.Name = book.Name;
+            bookDomain.Author = book.Author;
+            bookDomain.Description = book.Description;
+            bookDomain.Price = book.Price;
+            bookDomain.Currrency = book.Currrency;
+            bookDomain.Image = book.Image;
+            bookDomain.Quantity = book.Quantity;
+
+            _bookStoreDbContext.Books.Update(bookDomain);
+            await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
+        }
     }
 }
