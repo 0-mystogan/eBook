@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/user.model';
@@ -10,12 +10,12 @@ import { User } from 'src/app/user.model';
 })
 export class NavbarComponent implements OnInit {
 
-  user : User;
-  isLogedIn : boolean = true;
-  constructor(public userService : UserService) {
+  user: User;
+  isLogedIn: boolean = true;
+
+  constructor(public userService: UserService) {
   }
 
   ngOnInit(): void {
   }
-
 }

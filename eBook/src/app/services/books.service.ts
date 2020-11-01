@@ -31,4 +31,19 @@ export class BooksService {
     return this.http.post<Book>(url, book, this.httpOptions);
   }
 
+  searchByName(name: string): Observable<Book[]> {
+    const url = `${this.booksUrl}/searchbyname/${name}`;
+    return this.http.get<Book[]>(url);
+  }
+
+  updateBook(book: Book): Observable<Book> {
+    const url = `${this.booksUrl}/update`;
+    return this.http.put<Book>(url, book);
+  }
+
+  deleteBook(id: number): Observable<Book> {
+    const url = `${this.booksUrl}/remove/${id}`;
+    return this.http.delete<Book>(url);
+  }
+
 }

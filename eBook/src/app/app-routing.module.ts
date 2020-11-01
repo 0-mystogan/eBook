@@ -26,7 +26,7 @@ const routes: Routes = [
    },
    {
       path: 'add', component: AddBookComponent
-   }
+   },
 ];
 
 @NgModule({
