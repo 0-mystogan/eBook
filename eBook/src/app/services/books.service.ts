@@ -36,4 +36,9 @@ export class BooksService {
     return this.http.get<Book[]>(url);
   }
 
+  deleteBook(id: number): Observable<Book> {
+    const url = `${this.booksUrl}/remove/${id}`;
+    return this.http.delete<Book>(url);
+  }
+
 }

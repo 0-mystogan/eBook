@@ -52,6 +52,11 @@ export class BooksComponent implements OnInit {
     }, 1000);
   }
 
+  deleteBook(id: number) {
+    this.booksService.deleteBook(id).subscribe();
+    location.reload();
+  }
+
   showItem(book) {
     if (!this.isShow)
       this.isShow = true;
