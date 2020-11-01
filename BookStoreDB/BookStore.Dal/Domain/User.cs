@@ -16,6 +16,12 @@ namespace BookStore.Domain
         public bool IsAdmin { get; set; }
         public IList<Cart> Carts { get; set; }
         public IList<Order> Orders { get; set; }
+
+        //This is for createdby property please dont remove it!!!
+        public override string ToString()
+        {
+            return $"{FirstName.ToLower()}{LastName.ToLower()}";
+        }
     }
     
 }

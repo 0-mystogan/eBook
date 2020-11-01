@@ -1,4 +1,6 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from '../user.model';
 import { USERS } from '../users';
 
@@ -6,26 +8,35 @@ import { USERS } from '../users';
   providedIn: 'root'
 })
 export class UserService {
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
+
+  private userUrl = "https://localhost:44375/api/user";
+
   users : User[] = USERS;
+ 
 
   user : User = {
     id : 0,
-    picture: "",
     firstname: "",
     lastname: "",
     email: "",
     password: "",
-    books: [],
-    orders: []
+    address: "",
+    isAdmin: false
   }
-  constructor() { }
+  constructor(private http: HttpClient) { }
  
-  addUser(firstname, lastname, email, password){
-    this.user.firstname = firstname;
-    this.user.lastname = lastname;
-    this.user.email = email;
-    this.user.password = password;
+  addUser(user : User) : Observable<User>{
+    try {
+      const url = `${this.userUrl}/add`;
+      return this.http.post<User>(url, user, this.httpOptions);
+    } catch (err) {
+      console.error(err.message);
+    }
   }
+
   logIn(email, password){
     this.users.forEach(user => {
       if(user.email == email && user.password == password){

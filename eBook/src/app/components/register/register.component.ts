@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { error } from 'console';
 import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 import { MessageService } from 'src/app/services/message.service';
 import { UserService } from 'src/app/services/user.service';
@@ -10,10 +11,15 @@ import { User } from 'src/app/user.model';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  firstname : string;
-  lastname : string;
-  email : string;
-  password : string;
+  user : User = {
+    id : 0,
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    address: "",
+    isAdmin:false
+  };
   password2 : string;
 
   constructor(private userService : UserService, private messageService : MessageService) { }
@@ -21,8 +27,17 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   } 
   onSubmit(){
-   this.userService.addUser(this.firstname, this.lastname, this.email, this.password)
-   
-   console.log(this.userService.user.email);
+    if(this.validateUser(this.user)){
+      this.userService.addUser(this.user).subscribe(user => user = this.userService.user, error => console.log(error));
+    }else {
+      console.log("Niste unijeli sve podatke");
+    }
+    
+  }
+
+  validateUser(user : User) : boolean{
+    if(user.firstname == "" || user.lastname == "" || user.email == "" || user.password == "" || user.address == "")
+      return false;
+      else return true; 
   }
 }
