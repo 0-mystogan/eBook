@@ -31,4 +31,9 @@ export class BooksService {
     return this.http.post<Book>(url, book, this.httpOptions);
   }
 
+  searchByName(name: string): Observable<Book[]> {
+    const url = `${this.booksUrl}/searchbyname/${name}`;
+    return this.http.get<Book[]>(url);
+  }
+
 }

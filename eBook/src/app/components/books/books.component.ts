@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
 import { Book } from '../../book.model';
 
@@ -13,9 +14,11 @@ export class BooksComponent implements OnInit {
   books: Book[];
   isShow: boolean = false;
   showBook: Book;
+  timeout: any = null;
+  searchName: string;
 
-
-  constructor(private booksService: BooksService, private route: ActivatedRoute) { }
+  constructor(private booksService: BooksService) {
+  }
 
   ngOnInit(): void {
     this.getBooks();
@@ -24,6 +27,29 @@ export class BooksComponent implements OnInit {
   getBooks() {
     this.booksService.getBooks().subscribe(data =>
       this.books = data.collection);
+  }
+
+  searchByName(name: string) {
+    if (name === "") {
+      this.getBooks();
+    }
+    else {
+      this.booksService.searchByName(name).subscribe(data => {
+        this.books = data.collection;
+      });
+    }
+  }
+
+  onSearchByName(event: any) {
+
+    clearTimeout(this.timeout);
+    var $this = this;
+
+    this.timeout = setTimeout(function () {
+      if (event.keyCode != 13) {
+        $this.searchByName($this.searchName);
+      }
+    }, 1000);
   }
 
   showItem(book) {
