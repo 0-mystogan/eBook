@@ -29,11 +29,32 @@ namespace BookStore.Controllers
             return Ok(book);
         }
 
+        [HttpGet("{name}")]
+        public async Task<IActionResult> SearchByName(string name)
+        {
+            var books = await _bookRepository.SearchByName(name);
+            return Ok(books);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] BookDto book)
         {
             var newBook = await _bookRepository.Add(book);
             return Ok(newBook);
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Remove(int id)
+        {
+            var deleteBook = await _bookRepository.Remove(id);
+            return Ok(deleteBook);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] BookDto book)
+        {
+            await _bookRepository.Update(book);
+            return Ok();
         }
     }
 }

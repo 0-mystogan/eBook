@@ -5,7 +5,7 @@ import { BookItemComponent } from './components/book-item/book-item.component';
 import { HomeComponent } from './components/layout/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import {AddBookComponent} from './components/add-book/add-book.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 
 const routes: Routes = [
@@ -25,8 +25,8 @@ const routes: Routes = [
       path: 'book/:id', component: BookItemComponent
    },
    {
-      path: 'add', component : AddBookComponent
-   }
+      path: 'add', component: AddBookComponent
+   },
 ];
 
 @NgModule({

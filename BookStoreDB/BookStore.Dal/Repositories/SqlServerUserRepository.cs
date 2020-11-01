@@ -28,7 +28,8 @@ namespace BookStore.Dal.ViewModel
                 LastName = userRegister.LastName,
                 Email = userRegister.Email,
                 Password = userRegister.Password,
-                Address = userRegister.Address
+                Address = userRegister.Address,
+                CreatedBy = userRegister.FirstName.ToLower() + userRegister.LastName.ToLower()
             };
             await _bookStoreDbContext.Users.AddAsync(userDomain, cancellationToken);
             await _bookStoreDbContext.SaveChangesAsync(cancellationToken);

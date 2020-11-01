@@ -48,5 +48,45 @@ namespace BookStore.Dal.Repositories
             var collection = await _bookStoreDbContext.Books.Take(maxTop).ToListAsync(cancellationToken);
             return new BookViewModel(collection);
         }
+
+        public async Task<bool> Remove(int id, CancellationToken cancellationToken = default)
+        {
+            var book = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+
+            _bookStoreDbContext.Books.Remove(book);
+            await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+
+        public async Task<BookViewModel> SearchByName(string name, CancellationToken cancellationToken = default)
+        {
+            const int maxTop = 10;
+
+            var booksNameCollection = 
+                await _bookStoreDbContext.Books
+                .Where(b => b.Name.ToLower()
+                .IndexOf(name.ToLower()) != -1)
+                .ToListAsync(cancellationToken);
+
+            var collection = booksNameCollection.Take(maxTop).ToList();
+            return new BookViewModel(collection);
+        }
+
+        public async Task Update(BookDto book, CancellationToken cancellationToken = default)
+        {
+            var bookDomain = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == book.Id, cancellationToken);
+
+            bookDomain.Id = book.Id;
+            bookDomain.Name = book.Name;
+            bookDomain.Author = book.Author;
+            bookDomain.Description = book.Description;
+            bookDomain.Price = book.Price;
+            bookDomain.Currrency = book.Currrency;
+            bookDomain.Image = book.Image;
+            bookDomain.Quantity = book.Quantity;
+
+            _bookStoreDbContext.Books.Update(bookDomain);
+            await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
+        }
     }
 }
