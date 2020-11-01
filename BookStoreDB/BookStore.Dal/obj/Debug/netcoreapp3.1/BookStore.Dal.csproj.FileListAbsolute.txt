@@ -15,6 +15,7 @@ C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcor
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.runtimeconfig.dev.json
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.dll
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.pdb
+C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csprojAssemblyReference.cache
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfoInputs.cache
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfo.cs
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.dll
@@ -33,15 +34,7 @@ C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\B
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.dll
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.pdb
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.genruntimeconfig.cache
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.deps.json
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.runtimeconfig.json
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.runtimeconfig.dev.json
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.dll
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.pdb
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csprojAssemblyReference.cache
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfoInputs.cache
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfo.cs
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csproj.CoreCompileInputs.cache
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.dll
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.pdb
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.genruntimeconfig.cache
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfoInputs.cache
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfo.cs
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csproj.CoreCompileInputs.cache
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csprojAssemblyReference.cache
