@@ -40,6 +40,7 @@ export class BookItemComponent implements OnInit {
   onSubmit(book) {
     this.checkoutForm.reset();
     this.booksService.updateBook(book).subscribe();
+    this.getBook();
     location.reload();
   }
 
