@@ -53,8 +53,12 @@ export class BooksComponent implements OnInit {
   }
 
   deleteBook(id: number) {
-    this.booksService.deleteBook(id).subscribe();
-    location.reload();
+    let r = confirm("Do you want to delete book?");
+    if (r) {
+      this.booksService.deleteBook(id).subscribe();
+      this.getBooks();
+      location.reload();
+    }
   }
 
   showItem(book) {
