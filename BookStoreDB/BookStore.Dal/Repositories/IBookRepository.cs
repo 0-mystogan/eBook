@@ -14,5 +14,7 @@ namespace BookStore.Dal.ViewModel
         Task<BookViewModel> Add(BookDto book, CancellationToken cancellationToken = default);
         Task Update(BookDto book, CancellationToken cancellationToken = default);
         Task<bool> Remove(int id, CancellationToken cancellationToken = default);
+        Task<BookViewModel> SearchByName(string name, CancellationToken cancellationToken = default);
+
     }
 }

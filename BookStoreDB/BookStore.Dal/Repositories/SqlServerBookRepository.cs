@@ -58,6 +58,20 @@ namespace BookStore.Dal.Repositories
             return true;
         }
 
+        public async Task<BookViewModel> SearchByName(string name, CancellationToken cancellationToken = default)
+        {
+            const int maxTop = 10;
+
+            var booksNameCollection = 
+                await _bookStoreDbContext.Books
+                .Where(b => b.Name.ToLower()
+                .IndexOf(name.ToLower()) != -1)
+                .ToListAsync(cancellationToken);
+
+            var collection = booksNameCollection.Take(maxTop).ToList();
+            return new BookViewModel(collection);
+        }
+
         public async Task Update(BookDto book, CancellationToken cancellationToken = default)
         {
             var bookDomain = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == book.Id, cancellationToken);

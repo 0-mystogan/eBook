@@ -29,6 +29,13 @@ namespace BookStore.Controllers
             return Ok(book);
         }
 
+        [HttpGet("{name}")]
+        public async Task<IActionResult> SearchByName(string name)
+        {
+            var books = await _bookRepository.SearchByName(name);
+            return Ok(books);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] BookDto book)
         {
