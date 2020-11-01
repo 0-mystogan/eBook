@@ -179,3 +179,9 @@ C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookS
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.dll
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfoInputs.cache
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfo.cs
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\korisnik\Desktop\eBook\eBook\BookStoreDB\BookStore\obj\Debug\netcoreapp3.1\BookStore.csprojAssemblyReference.cache
