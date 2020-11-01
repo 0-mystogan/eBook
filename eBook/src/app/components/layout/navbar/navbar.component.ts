@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
 
   user: User;
   isLogedIn: boolean = true;
+  name : string = this.userService.user.firstname;
 
   constructor(public userService: UserService) {
   }

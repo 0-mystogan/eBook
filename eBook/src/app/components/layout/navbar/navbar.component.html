@@ -7,8 +7,8 @@
    <div class="navbar-nav">
      <a class="nav-item nav-link text-white" routerLink="/">Home <span class="sr-only"></span></a>
      <a class="nav-item nav-link text-white" routerLink="/books" >Books</a>
-     <a *ngIf="userService.user.firstname == ''" class="nav-item nav-link text-white" routerLink="/register">Register</a>
-    <a class="nav-item nav-link text-white" routerLink="/profile"> <i class="fas fa-user"></i>   {{userService.user.firstname}} </a> 
+     <a *ngIf="userService.user.firstName == ''" class="nav-item nav-link text-white" routerLink="/register">Register</a>
+    <a *ngIf="userService.user.firstName != ''" class="nav-item nav-link text-white" routerLink="/profile"> <i class="fas fa-user"></i>   {{userService.user.firstName}} </a> 
    </div>
  </div>
 </nav>

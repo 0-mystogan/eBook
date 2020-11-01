@@ -29,7 +29,7 @@ namespace BookStore.Controllers
             var newUser = await _userRepository.AddUser(user);
             return Ok(newUser);
         }
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> LogIn([FromBody] UserLoginDto user)
         {
             var User = await _userRepository.LogInUser(user);

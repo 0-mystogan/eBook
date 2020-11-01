@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   } 
   onSubmit(){
     if(this.validateUser(this.user)){
-      this.userService.addUser(this.user).subscribe(user => user = this.userService.user, error => console.log(error));
+      this.userService.addUser(this.user).subscribe(user => this.userService.user = user.user, error => console.log(error));
     }else {
       console.log("Niste unijeli sve podatke");
     }

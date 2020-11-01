@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { error } from 'protractor';
 import { UserService } from 'src/app/services/user.service';
+import { UserLogin } from 'src/app/userlogin.model';
 
 @Component({
   selector: 'app-login',
@@ -10,16 +12,28 @@ export class LoginComponent implements OnInit {
   @Input() click : boolean;
   @Output() eventEmitter = new EventEmitter<boolean>(); 
 
-  email : string;
-  password : string;
+ user : UserLogin = {
+   email : "",
+   password : ""
+ }
 
   constructor(private userService : UserService) { }
 
   ngOnInit(): void {
   }
-  logIn(value : boolean){
-    console.log(value);
-    this.eventEmitter.emit(value);
-    this.userService.logIn(this.email, this.password);
+
+   onSubmit(){
+   this.userService.logIn(this.user).subscribe(user  => {
+    this.userService.user = user.user;
+    },
+      error => console.error(error));
+   
   }
+
+  logIn(value : boolean){
+    this.onSubmit();
+    this.eventEmitter.emit(value);
+  }
+
 }
+  
