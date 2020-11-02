@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book } from '../book.model';
 import { Observable } from 'rxjs';
@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BooksService {
+
+
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -38,14 +40,26 @@ export class BooksService {
 
   updateBook(book: Book): Observable<Book> {
     const url = `${this.booksUrl}/update`;
-    console.log(url);
-    console.log(book.id);
     return this.http.put<Book>(url, book);
   }
 
   deleteBook(id: number): Observable<Book> {
     const url = `${this.booksUrl}/remove/${id}`;
     return this.http.delete<Book>(url);
+  }
+
+
+
+  uploadBookImage(files: any): Observable<any> {
+
+
+    let fileToUpload = <File>files[0];
+    const formData = new FormData();
+    formData.append('file', fileToUpload, fileToUpload.name);
+
+    const url = `${this.booksUrl}/upload`;
+
+    return this.http.post(url, formData, { reportProgress: true, observe: 'events' });
   }
 
 }
