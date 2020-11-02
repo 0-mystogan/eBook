@@ -45,3 +45,4 @@ C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcor
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.dll
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.pdb
 C:\Users\Ohran\Documents\GitHub\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.genruntimeconfig.cache
+C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csprojAssemblyReference.cache
