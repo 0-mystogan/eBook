@@ -13,8 +13,8 @@ import { User } from 'src/app/user.model';
 export class RegisterComponent implements OnInit {
   user : User = {
     id : 0,
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     address: "",
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   } 
   onSubmit(){
     if(this.validateUser(this.user)){
-      this.userService.addUser(this.user).subscribe(user => this.userService.user = user.user, error => console.log(error));
+      this.userService.addUser(this.user).subscribe(user => this.userService.user = user, error => console.log(error));
     }else {
       console.log("Niste unijeli sve podatke");
     }

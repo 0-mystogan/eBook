@@ -15,7 +15,6 @@ C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\B
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.runtimeconfig.dev.json
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.dll
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.pdb
-C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csprojAssemblyReference.cache
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfoInputs.cache
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfo.cs
 C:\Users\mirza\Desktop\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csproj.CoreCompileInputs.cache
