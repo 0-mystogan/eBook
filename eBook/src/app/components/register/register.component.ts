@@ -13,8 +13,8 @@ import { User } from 'src/app/user.model';
 export class RegisterComponent implements OnInit {
   user : User = {
     id : 0,
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     address: "",
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   } 
   onSubmit(){
     if(this.validateUser(this.user)){
-      this.userService.addUser(this.user).subscribe(user => user = this.userService.user, error => console.log(error));
+      this.userService.addUser(this.user).subscribe(user => this.userService.user = user, error => console.log(error));
     }else {
       console.log("Niste unijeli sve podatke");
     }
@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
   }
 
   validateUser(user : User) : boolean{
-    if(user.firstname == "" || user.lastname == "" || user.email == "" || user.password == "" || user.address == "")
+    if(user.firstName == "" || user.lastName == "" || user.email == "" || user.password == "" || user.address == "")
       return false;
       else return true; 
   }

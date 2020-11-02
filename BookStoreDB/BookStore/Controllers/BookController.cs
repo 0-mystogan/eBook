@@ -46,7 +46,7 @@ namespace BookStore.Controllers
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Remove(int id)
         {
-            var deleteBook = await _bookRepository.Remove(id);
+            var deleteBook = await _bookRepository.Remove(id); 
             return Ok(deleteBook);
         }
 

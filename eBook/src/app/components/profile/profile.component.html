@@ -5,9 +5,10 @@
        <div class="bg-white shadow rounded overflow-hidden">
            <div class="bg-dark">
                <div class="media align-items-end profile-header">
-                   <div class="profile mr-3"><img *ngIf="userService.user.picture != ''" src="{{userService.user.picture}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a><a href="#" class="btn btn-danger btn-sm btn-block" (click)="logOut()">Log out</a></div>
+                   <div class="profile mr-3"><img *ngIf="userService.user.picture != ''" src="../../../assets/jasir.jpg" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a  class="btn btn-dark text-white btn-sm btn-block" (click)="openForm(true)">Edit profile</a><a href="#" class="btn btn-danger btn-sm btn-block" (click)="logOut()">Log out</a></div>
+                   <div class="text-white"><app-update-user *ngIf="click" (eventEmitter)="openForm($event)"></app-update-user></div>
                    <div class="media-body mb-5 text-white">
-                       <h4 class="mt-0 mb-0 text-dark">{{userService.user.firstname}}  {{userService.user.lastname}}</h4>
+                       <h4 class="mt-0 mb-0 text-dark">{{userService.user.firstName}}  {{userService.user.lastName}}</h4>
                    </div>
                </div>
            </div>
@@ -15,10 +16,10 @@
            <div class="bg-light p-4 d-flex justify-content-end text-center">
                <ul class="list-inline mb-0">
                    <li class="list-inline-item">
-                       <h5 class="font-weight-bold mb-0 d-block">{{userService.user.books.length}}</h5><small class="text-muted"> <i class="fa fa-cart-plus mr-1"></i>Cart</small>
+                       <h5 class="font-weight-bold mb-0 d-block">0</h5><small class="text-muted"> <i class="fa fa-cart-plus mr-1"></i>Cart</small>
                    </li>
                    <li class="list-inline-item">
-                       <h5 class="font-weight-bold mb-0 d-block">{{userService.user.orders.length}}</h5><small class="text-muted"> <i class="fa fa-book mr-1"></i>Ordered</small>
+                       <h5 class="font-weight-bold mb-0 d-block">0</h5><small class="text-muted"> <i class="fa fa-book mr-1"></i>Ordered</small>
                    </li>
                </ul>
            </div>

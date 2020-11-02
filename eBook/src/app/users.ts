@@ -3,8 +3,8 @@ import { User } from './user.model';
 export const USERS: User[] = [
    {
       id: 1,
-      firstname: "Jasir",
-      lastname: "Burić",
+      firstName: "Jasir",
+      lastName: "Burić",
       email: "jasir.buric@edu.fit.ba",
       password: "password123",
       address: "Gorazdanska 96",
@@ -12,8 +12,8 @@ export const USERS: User[] = [
    },
    {
       id: 2,
-      firstname: "Muhamed",
-      lastname: "Halkić",
+      firstName: "Muhamed",
+      lastName: "Halkić",
       email: "muhamed.halkic@edu.fit.ba",
       password: "password321",
       address: "Halkici23",

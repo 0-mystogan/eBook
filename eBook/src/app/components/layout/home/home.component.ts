@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
   openForm(value : boolean){
     this.click = value;
   }
+  
+  clickUser(){
+    console.log(this.userService.user);
+  }
 }

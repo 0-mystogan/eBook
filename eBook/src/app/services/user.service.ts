@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../user.model';
+import { UserLogin } from '../userlogin.model';
 import { USERS } from '../users';
 
 @Injectable({
@@ -19,12 +20,19 @@ export class UserService {
 
   user : User = {
     id : 0,
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     address: "",
     isAdmin: false
+  }
+
+  userr : User;
+
+  userlogin : UserLogin = {
+    email : "",
+    password : ""
   }
   constructor(private http: HttpClient) { }
  
@@ -37,12 +45,12 @@ export class UserService {
     }
   }
 
-  logIn(email, password){
-    this.users.forEach(user => {
-      if(user.email == email && user.password == password){
-        this.user = user;
-        console.log(this.user);
-      }
-    });
+  logIn(user : UserLogin) : Observable<User>{
+    try {
+      const url = `${this.userUrl}/login`;
+      return this.http.post<User>(url, user, this.httpOptions);
+    } catch (err) {
+      console.error(err.message);
+    }
   }
 }
