@@ -1,32 +1,27 @@
-<div>
-   <input class="form-control mr-sm-2" [(ngModel)]="searchName" type="text" name="search" placeholder="Search"
-      aria-label="Search" (keyup)="onSearchByName($event)">
-   <div class="grid">
-   <ul *ngFor="let book of books" class="card promoting-card">
-      <div class="card-body d-flex flex-row" routerLink="/book/{{book.id}}">
+
+   <div class="home-book">
+      <div class="search-container">
          <div>
-            <h4 class="card-title font-weight-bold mb-2">
-               {{book.name}}
-            </h4>
-            <p class="card-text"><i class="far fa-clock pr-2"></i>release</p>
-            <small class="text-muted mouse" (click)="showItem(book)">Show More</small>
+            
+         </div>
+         <div><input class="form-control search-book" [(ngModel)]="searchName" type="text" name="search" placeholder="Search"
+            aria-label="Search" (keyup)="onSearchByName($event)">
+         </div>
+         <div></div>
+         
+      </div>
+      
+      <div class="book-container" >
+         <div class="book-item" *ngFor="let book of books">
+            <span class="book-name">{{book.name}}</span>
+            <span class="book-author">{{book.author}}</span>
+            <img src="{{book.image}}" class="book-image" routerLink="/book/{{book.id}}">
+            <p class="book-price">{{book.currrency}} {{book.price}}.00</p>
+            <button [ngClass]=" isAdmin ? 'delete-button' : 'hide' " (click)="deleteBook(book.id)">Delete book</button>
+         </div>
+         <div class="book-item" id="add-book" routerLink="/add">
+            <img src="../../../assets/plus.svg" class="add-book-img">
          </div>
       </div>
-      <div class="view overlay">
-         <img src={{book.image}} alt={{book.name}} class="card-img-top rounded-0">
-         <a href="#!">
-            <div class="mask rgba-white-slight"></div>
-         </a>
-      </div>
-      <div class="card-body">
-         <div class="collapse-content"></div>
-      </div>
-      <button (click)="deleteBook(book.id)">DELETE</button>
-   </ul>
-   <ul class="card promoting-card">
-      <div class="card-body d-flex flex-row" routerLink="/add">
-        <h1>ADD BOOK</h1>
-      </div>
-   </ul>
-</div>
-</div>
+   </div>
+   

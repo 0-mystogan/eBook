@@ -1,29 +1,106 @@
-.grid{
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+.hide{
+   display: none;
+}
+
+.home-book{
+   background-color: #ededed;
+}
+
+.book-container{
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
    width: 80%;
    margin: auto;
+   grid-column-gap: 40px;
+   grid-row-gap: 40px;
+   padding-top: 50px;
+   
+   
+}
+.search-container{
+   width: 80%;
    display: grid;
-   grid-template-columns: auto auto auto auto;
-}
-small:hover{
-   cursor: pointer;
-}
-// .book-img{
-//    cursor: pointer;
-// }
+   grid-template-columns: 1fr 1fr 1fr;
+   margin: auto;
+   grid-template-areas: "a b c";
+   grid-column-gap: 40px;
+   grid-row-gap: 40px;
+   
 
-// .grid-container {
-//    display: grid;
-//    grid-column-gap: 50px;
-//    grid-template-columns: auto auto auto;
-//    background-color: #2196F3;
-//    padding: 10px;
-//    height: 100vh;
-//  }
- 
-//  .grid-item {
-//    background-color: rgba(255, 255, 255, 0.8);
-//    border: 1px solid rgba(0, 0, 0, 0.8);
-//    padding: 20px;
-//    font-size: 30px;
-//    text-align: center;
-//  }
+
+   .search-book{
+   
+      grid-area: b;
+      margin-top: 50px;
+      
+      
+      
+   }
+   
+}
+
+.book-item{
+   border: 1px solid #bababa;
+   background-color: #e0e0e0;
+   border-radius: 5px;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+      
+   $cijena : #000000;
+   
+   .book-name{
+         font-family: 'Raleway', sans-serif;
+         font-weight: bold;
+         font-size: 25px;
+         margin-top: 15px;
+         
+      }
+      .book-author{
+         font-family: 'Raleway', sans-serif;
+         margin-top: 10px;
+      }
+      .book-image{
+         margin-top: 40px;
+         height: 250px;
+         width: 180px;
+         cursor: pointer;
+      }
+      .delete-button{
+         background-color: #4f4f4f;
+         color: #e3e3e3;
+         margin-top: 20px;
+         border: none;
+         border-radius: 10px;
+         width: 130px;
+         padding: 5px;
+         cursor: pointer;
+      }
+      .book-price{
+         font-family: 'Raleway', sans-serif;
+         font-weight: bold;
+         color: $cijena;
+         margin-top: 15px;
+         font-size: 17px;
+      }
+      
+      .add-book-img{
+         height: 150px;
+         width: 150px;
+         
+      }
+      
+
+}
+#add-book{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   
+}
+
