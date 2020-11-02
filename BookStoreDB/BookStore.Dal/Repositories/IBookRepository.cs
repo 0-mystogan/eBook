@@ -10,6 +10,7 @@ namespace BookStore.Dal.ViewModel
     public interface IBookRepository 
     {
         Task<BookViewModel> GetTopTen(CancellationToken cancellationToken = default);
+        //Task<List<BookDto>> GetTopTen(CancellationToken cancellationToken = default);
         Task<BookViewModel> GetById(int id, CancellationToken cancellationToken = default);
         Task<BookViewModel> Add(BookDto book, CancellationToken cancellationToken = default);
         Task Update(BookDto book, CancellationToken cancellationToken = default);
