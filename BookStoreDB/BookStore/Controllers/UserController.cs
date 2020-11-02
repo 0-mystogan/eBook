@@ -1,5 +1,4 @@
 ﻿using BookStore.Dal.ViewModel;
-using BookStore.Dal.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
@@ -33,6 +32,13 @@ namespace BookStore.Controllers
         public async Task<IActionResult> LogIn([FromBody] UserLoginDto user)
         {
             var User = await _userRepository.LogInUser(user);
+            return Ok(User);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] UserDto user)
+        {
+            var User = await _userRepository.UpdateUser(user);
             return Ok(User);
         }
     }
