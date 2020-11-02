@@ -6051,19 +6051,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ohran\\.nuget\\packages\\": {}
+    "C:\\Users\\korisnik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj",
+      "projectUniqueName": "C:\\Users\\korisnik\\Desktop\\eBook\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj",
       "projectName": "BookStore",
-      "projectPath": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj",
-      "packagesPath": "C:\\Users\\Ohran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore\\obj\\",
+      "projectPath": "C:\\Users\\korisnik\\Desktop\\eBook\\eBook\\BookStoreDB\\BookStore\\BookStore.csproj",
+      "packagesPath": "C:\\Users\\korisnik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\korisnik\\Desktop\\eBook\\eBook\\BookStoreDB\\BookStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ohran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6076,8 +6076,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
-              "projectPath": "C:\\Users\\Ohran\\Documents\\GitHub\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj"
+            "C:\\Users\\korisnik\\Desktop\\eBook\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj": {
+              "projectPath": "C:\\Users\\korisnik\\Desktop\\eBook\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj"
             }
           }
         }
