@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 
 
@@ -26,7 +27,8 @@ import { AddBookComponent } from './components/add-book/add-book.component';
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    AddBookComponent
+    AddBookComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

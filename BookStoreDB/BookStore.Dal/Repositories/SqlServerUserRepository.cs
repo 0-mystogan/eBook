@@ -37,11 +37,11 @@ namespace BookStore.Dal.ViewModel
         }
 
 
-        public async Task<UserViewModel> LogInUser(UserLoginDto userLogin, CancellationToken cancellationToken = default)
+        public async Task<UserDto> LogInUser(UserLoginDto userLogin, CancellationToken cancellationToken = default)
         {
             User User = await _bookStoreDbContext.Users.FirstOrDefaultAsync(u => u.Email == userLogin.Email && u.Password == userLogin.Password);
             //User.Orders = await _orderRepository.GetOrders(User.Id);
-            return new UserViewModel(User);
+            return new UserViewModel(User).User;
         }
 
     }

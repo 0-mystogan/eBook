@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
    onSubmit(){
    this.userService.logIn(this.user).subscribe(user  => {
-    this.userService.user = user.user;
+    this.userService.user = user;
     },
       error => console.error(error));
    
