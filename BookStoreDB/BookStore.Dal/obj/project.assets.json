@@ -5947,19 +5947,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mirza\\.nuget\\packages\\": {}
+    "C:\\Users\\yasir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
+      "projectUniqueName": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
       "projectName": "BookStore.Dal",
-      "projectPath": "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
-      "packagesPath": "C:\\Users\\mirza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mirza\\Desktop\\eBook\\BookStoreDB\\BookStore.Dal\\obj\\",
+      "projectPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
+      "packagesPath": "C:\\Users\\yasir\\.nuget\\packages\\",
+      "outputPath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mirza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yasir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6017,7 +6017,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
