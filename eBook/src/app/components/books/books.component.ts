@@ -17,6 +17,8 @@ export class BooksComponent implements OnInit {
   timeout: any = null;
   searchName: string;
 
+  isAdmin: boolean = true;
+
   constructor(private booksService: BooksService) {
   }
 
