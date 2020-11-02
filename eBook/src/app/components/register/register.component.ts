@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
   }
 
   validateUser(user : User) : boolean{
-    if(user.firstname == "" || user.lastname == "" || user.email == "" || user.password == "" || user.address == "")
+    if(user.firstName == "" || user.lastName == "" || user.email == "" || user.password == "" || user.address == "")
       return false;
       else return true; 
   }
