@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { error } from 'protractor';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/user.model';
 
@@ -28,7 +29,12 @@ export class UpdateUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    this.userService.updateUser(this.user).subscribe(user => this.userService.user = this.user, error => console.log(error));
+  }
+
   update(value : boolean){
+    this.onSubmit();
     this.eventEmitter.emit(value);
   }
 
