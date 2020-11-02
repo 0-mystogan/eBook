@@ -19,4 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="..\BookStore.Dal\BookStore.Dal.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+  </ItemGroup>
 </Project>

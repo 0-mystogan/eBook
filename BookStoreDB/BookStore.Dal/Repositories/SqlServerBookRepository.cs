@@ -49,6 +49,13 @@ namespace BookStore.Dal.Repositories
             return new BookViewModel(collection);
         }
 
+        //public async Task<List<BookDto>> GetTopTen(CancellationToken cancellationToken = default)
+        //{
+        //    const int maxTop = 10;
+        //    var collection = await _bookStoreDbContext.Books.Take(maxTop).ToListAsync(cancellationToken);
+        //    return new BookViewModel(collection).Collection.ToList();
+        //}
+
         public async Task<bool> Remove(int id, CancellationToken cancellationToken = default)
         {
             var book = await _bookStoreDbContext.Books.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);

@@ -3,10 +3,14 @@ using BookStore.Dal.Repositories;
 using BookStore.Dal.ViewModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using System.IO;
 
 namespace BookStore
 {
@@ -27,6 +31,12 @@ namespace BookStore
 
             var connectionString = Configuration.GetConnectionString("eBookShop");
             services.AddDbContext<BookStoreDbContext>(builder => builder.UseSqlServer(connectionString));
+
+            services.Configure<FormOptions>(o => {
+                o.ValueLengthLimit = int.MaxValue;
+                o.MultipartBodyLengthLimit = int.MaxValue;
+                o.MemoryBufferThreshold = int.MaxValue;
+            });
 
             services.AddScoped<IUserRepository, SqlServerUserRepository>();
             services.AddScoped<IOrderRepository, SqlServerOrderRepository>();
@@ -57,6 +67,11 @@ namespace BookStore
             });
 
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+                RequestPath = new PathString("/Resources")
+            });
 
             app.UseRouting();
 
