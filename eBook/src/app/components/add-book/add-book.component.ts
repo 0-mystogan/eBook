@@ -35,4 +35,11 @@ export class AddBookComponent implements OnInit {
     this.booksService.addBook(book).subscribe();
     this.router.navigate(['/books']);
   }
+
+  uploadFile(files) {
+    console.log("upload", files);
+    if (files.length === 0) {
+      return;
+    }
+  }
 }
