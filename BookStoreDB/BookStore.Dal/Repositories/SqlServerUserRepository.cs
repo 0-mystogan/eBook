@@ -44,5 +44,20 @@ namespace BookStore.Dal.ViewModel
             return new UserViewModel(User).User;
         }
 
+        public async Task<UserDto> UpdateUser(UserDto user, CancellationToken cancellationToken = default)
+        {
+            var updateUser =  _bookStoreDbContext.Users.FirstOrDefault(u => u.Id == user.Id);
+
+            updateUser.FirstName = user.FirstName;
+            updateUser.LastName = user.LastName;
+            updateUser.Address = user.Address;
+            updateUser.Email = user.Email;
+            updateUser.Password = user.Password;
+
+            _bookStoreDbContext.Users.Update(updateUser);
+            await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
+
+            return new UserViewModel(updateUser).User;
+        }
     }
 }

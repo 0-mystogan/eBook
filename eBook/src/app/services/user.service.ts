@@ -53,4 +53,13 @@ export class UserService {
       console.error(err.message);
     }
   }
+
+  updateUser(user : User) : Observable<User>{
+    try {
+      const url = `${this.userUrl}/update`;
+      return this.http.put<User>(url, user);
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
 }

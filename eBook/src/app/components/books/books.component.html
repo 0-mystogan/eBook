@@ -12,10 +12,10 @@
       </div>
       
       <div class="book-container" >
-         <div class="book-item" *ngFor="let book of books">
+         <div class="book-item" *ngFor="let book of books" routerLink="/book/{{book.id}}">
             <span class="book-name">{{book.name}}</span>
             <span class="book-author">{{book.author}}</span>
-            <img src="{{book.image}}" class="book-image" routerLink="/book/{{book.id}}">
+            <img src="{{book.image}}" class="book-image" >
             <p class="book-price">{{book.currrency}} {{book.price}}.00</p>
             <button [ngClass]=" isAdmin ? 'delete-button' : 'hide' " (click)="deleteBook(book.id)">Delete book</button>
          </div>
