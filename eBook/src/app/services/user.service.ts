@@ -28,8 +28,6 @@ export class UserService {
     isAdmin: false
   }
 
-  userr : User;
-
   userlogin : UserLogin = {
     email : "",
     password : ""
@@ -57,6 +55,7 @@ export class UserService {
   updateUser(user : User) : Observable<User>{
     try {
       const url = `${this.userUrl}/update`;
+      console.log(user);
       return this.http.put<User>(url, user);
     } catch (err) {
       console.log(err.message);

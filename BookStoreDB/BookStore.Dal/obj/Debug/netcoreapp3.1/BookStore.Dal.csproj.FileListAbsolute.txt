@@ -26,7 +26,6 @@ I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStor
 I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.runtimeconfig.dev.json
 I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.dll
 I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\bin\Debug\netcoreapp3.1\BookStore.Dal.pdb
-I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csprojAssemblyReference.cache
 I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfoInputs.cache
 I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.AssemblyInfo.cs
 I:\InfinityMesh\eBook\BookStoreDB\BookStore.Dal\obj\Debug\netcoreapp3.1\BookStore.Dal.csproj.CoreCompileInputs.cache
