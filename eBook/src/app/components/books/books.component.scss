@@ -1,8 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-.hide{
-   display: none;
-}
+
 
 .home-book{
    background-color: #ededed;
@@ -100,7 +98,7 @@
       
 
 }
-#add-book{
+.add-book{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -111,5 +109,8 @@
    -webkit-box-shadow: -1px -2px 13px 0px rgba(0,0,0,0.56); 
    box-shadow: -1px -2px 13px 0px rgba(0,0,0,0.56);
    
+}
+.hide{
+   display: none;
 }
 

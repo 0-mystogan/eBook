@@ -1,5 +1,71 @@
-<div class="container">
-    <h3>Add Book</h3>
+<div class="add-book-container">
+   <div class="add-book-form">
+      <h1 class="add-book-text">Add book</h1>
+      <hr class="add-book-underline"/>
+      <form  [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+         <div class="group-form">
+            <label>Name</label><br/>
+            <input  type="text" name="name" formControlName = "name" [(ngModel)]="checkoutForm.value.name" >
+        </div>
+        <div class="group-form">
+            <label>Author</label><br/>
+            <input  type="text" name="author" formControlName = "author" [(ngModel)]="checkoutForm.value.author">
+      </div>
+      <div class="group-form">
+            <label>Description</label><br/>
+            <input  type="text" name="description" formControlName = "description" [(ngModel)]="checkoutForm.value.description">
+      </div>
+      <div class="group-form">
+            <label>Price</label><br/>
+            <input  type="number" name="price" formControlName = "price" [(ngModel)]="checkoutForm.value.price">
+      </div>
+      <div class="group-form">
+            <label>Currency</label><br/>
+            <input  type="text" name="currrency" formControlName = "currrency" [(ngModel)]="checkoutForm.value.currrency">
+      </div>
+      <div class="group-form">
+            <label>Image</label><br/>
+            <input  type="text" name="image" formControlName = "image" [(ngModel)]="checkoutForm.value.image">
+      </div>
+      <div class="group-form">
+            <label>Quantity</label><br/>
+            <input  type="number" name="quantity" formControlName = "quantity" [(ngModel)]="checkoutForm.value.quantity">
+      </div>
+         <div class="btn-container">
+            <input type="submit" value="Submit" class="button-submit">
+         </div>
+         
+      </form>
+   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <div class="add-book-preview">
+      <div class="book-item">
+         <span class="book-name">{{checkoutForm.value.name}}</span>
+         <span class="book-author">{{checkoutForm.value.author}}</span>
+         <img src="../../../assets/Medvjedgrad.jpg" class="book-image" >
+         <p class="book-price">{{checkoutForm.value.currrency}} {{checkoutForm.value.price}}.00</p>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+    <!-- <h3>Add Book</h3>
     <form  [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
       <div class="form-group">
           <label>Name</label>
@@ -30,6 +96,6 @@
     <input class="form-control" type="number" name="quantity" formControlName = "quantity" placeholder="Quantity">
  </div>
        <input type="submit" value="Submit" class="btn">
-    </form>
+    </form> -->
  
  </div>

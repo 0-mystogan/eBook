@@ -19,7 +19,7 @@
             <p class="book-price">{{book.currrency}} {{book.price}}.00</p>
             <button [ngClass]=" isAdmin ? 'delete-button' : 'hide' " (click)="deleteBook(book.id)">Delete book</button>
          </div>
-         <div class="book-item" id="add-book" routerLink="/add">
+         <div class="book-item"  routerLink="/add" [ngClass]=" isAdmin ? 'add-book' : 'hide' ">
             <img src="../../../assets/plus.svg" class="add-book-img">
          </div>
       </div>

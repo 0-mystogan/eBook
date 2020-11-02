@@ -10,7 +10,7 @@ import { AddBookComponent } from './components/add-book/add-book.component';
 
 const routes: Routes = [
    {
-      path: '', component: HomeComponent
+      path: '', component: /*HomeComponent*/ BooksComponent
    },
    {
       path: 'books', component: BooksComponent
