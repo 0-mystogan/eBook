@@ -49,6 +49,10 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   cursor: pointer;
+   
+
+   
 
       
    $cijena : #000000;
@@ -101,6 +105,11 @@
    justify-content: center;
    align-items: center;
    cursor: pointer;
+   
+}
+.book-item:hover{
+   -webkit-box-shadow: -1px -2px 13px 0px rgba(0,0,0,0.56); 
+   box-shadow: -1px -2px 13px 0px rgba(0,0,0,0.56);
    
 }
 
