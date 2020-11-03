@@ -6,6 +6,7 @@
 
 .home-book{
    background-color: #ededed;
+   padding-top: 2%;
 }
 
 .book-container{
@@ -113,3 +114,23 @@
    
 }
 
+@media only screen and (max-width: 600px){
+   
+.book-container{
+   display:flex;
+   flex-direction: column;
+  
+   width: 100%;
+   margin: auto;
+   align-items: center;
+  
+   padding-top: 50px;
+}
+   .home-book{
+      padding-top: 5%;
+      background-color:#ededed;
+   }
+   .book-container{
+      width: 100%;
+   }
+}
