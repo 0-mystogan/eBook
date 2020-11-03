@@ -46,7 +46,7 @@ namespace BookStore.Dal.ViewModel
 
         public async Task<UserDto> UpdateUser(UserDto user, CancellationToken cancellationToken = default)
         {
-            var updateUser =  _bookStoreDbContext.Users.FirstOrDefault(u => u.Id == user.Id);
+            var updateUser =  await _bookStoreDbContext.Users.FirstOrDefaultAsync(u => u.Id == user.Id, cancellationToken);
 
             updateUser.FirstName = user.FirstName;
             updateUser.LastName = user.LastName;
@@ -58,6 +58,18 @@ namespace BookStore.Dal.ViewModel
             await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
 
             return new UserViewModel(updateUser).User;
+        }
+
+        public async Task<UserDto> UpdateImage(UserDto user, CancellationToken cancellationToken = default)
+        {
+            var _user = await _bookStoreDbContext.Users.FirstOrDefaultAsync(u => u.Id == user.Id, cancellationToken);
+
+            _user.Image = user.Image;
+
+            _bookStoreDbContext.Users.Update(_user);
+            await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
+
+            return new UserViewModel(_user).User;
         }
     }
 }

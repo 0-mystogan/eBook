@@ -19,7 +19,8 @@ export class UpdateUserComponent implements OnInit {
     email: "",
     password: "",
     address: "",
-    isAdmin:false
+    isAdmin:false,
+    image: ""
   };
   password2 : string;
   password3 : string;
@@ -30,7 +31,10 @@ export class UpdateUserComponent implements OnInit {
   }
 
   onSubmit(){
-    this.userService.updateUser(this.user).subscribe(user => this.userService.user = this.user, error => console.log(error));
+    this.user.id = this.userService.user.id;
+    this.setPasswords();
+    this.userService.updateUser(this.user)
+    .subscribe(user => this.userService.user = user, error => console.log(error));
   }
 
   update(value : boolean){
@@ -38,5 +42,13 @@ export class UpdateUserComponent implements OnInit {
     this.eventEmitter.emit(value);
   }
 
-
+  setPasswords(){
+    if(this.password2 == this.password3){
+      this.user.password = this.password2;
+    }else {
+      console.log("your password do not match");
+      this.password2 = "";
+      this.password3 = "";
+    }
+  }
 }

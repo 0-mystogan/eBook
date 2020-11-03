@@ -3,19 +3,19 @@
    <form (ngSubmit)="onSubmit()">
      <div class="form-group">
          <label>First name</label>
-         <input class="form-control" type="text" name="firstName" [(ngModel)] = "user.firstName"placeholder="First name">
+         <input class="form-control"  type="text" name="firstName" [(ngModel)] = "user.firstName" placeholder="{{userService.user.firstName}}">
      </div>
      <div class="form-group">
       <label>Last name</label>
-      <input class="form-control" type="text" name="lastName" [(ngModel)] = "user.lastName" placeholder="Last name">
+      <input class="form-control" type="text"  name="lastName" [(ngModel)] = "user.lastName" placeholder="{{userService.user.lastName}}">
   </div>
   <div class="form-group">
    <label>New Address</label>
-   <input class="form-control" type="text" name="address" [(ngModel)] = "user.address" placeholder="Address">
+   <input class="form-control" type="text"  name="address" [(ngModel)] = "user.address" placeholder="{{userService.user.address}}">
 </div>
   <div class="form-group">
    <label>New Email</label>
-   <input class="form-control" type="email" name="email" [(ngModel)] = "user.email" placeholder="Email">
+   <input class="form-control" type="email"  name="email" [(ngModel)] = "user.email" placeholder="{{userService.user.email}}">
 </div>
 <div class="form-group">
    <label>Change password</label>
@@ -23,7 +23,7 @@
    <input class="form-control" type="password" name="password2" [(ngModel)] = "password2" placeholder="New password">
    <input class="form-control" type="password" name="password2" [(ngModel)] = "password3" placeholder="Repeat password" (key.enter)="update(false)">
 </div>
-
+ 
       <input type="submit" value="Submit" class="btn" (click)="update(false)">
    </form>
 

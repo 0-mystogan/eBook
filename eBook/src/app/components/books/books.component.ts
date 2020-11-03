@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
+import { UserService } from 'src/app/services/user.service';
 import { Book } from '../../book.model';
 
 
@@ -19,7 +20,7 @@ export class BooksComponent implements OnInit {
 
   isAdmin: boolean = true;
 
-  constructor(private booksService: BooksService) {
+  constructor(private booksService: BooksService, public userService: UserService) {
   }
 
   ngOnInit(): void {

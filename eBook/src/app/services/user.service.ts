@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../user.model';
 import { UserLogin } from '../userlogin.model';
-import { USERS } from '../users';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +14,6 @@ export class UserService {
 
   private userUrl = "https://localhost:44375/api/user";
 
-  users : User[] = USERS;
- 
-
   user : User = {
     id : 0,
     firstName: "",
@@ -25,10 +21,9 @@ export class UserService {
     email: "",
     password: "",
     address: "",
-    isAdmin: false
+    isAdmin: false,
+    image: ""
   }
-
-  userr : User;
 
   userlogin : UserLogin = {
     email : "",
@@ -57,6 +52,7 @@ export class UserService {
   updateUser(user : User) : Observable<User>{
     try {
       const url = `${this.userUrl}/update`;
+      console.log(user);
       return this.http.put<User>(url, user);
     } catch (err) {
       console.log(err.message);

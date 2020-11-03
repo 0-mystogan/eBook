@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
-import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book } from '../book.model';
 import { Observable } from 'rxjs';
 
@@ -8,9 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class BooksService {
 
-  public progress: number;
-  public message: string;
-  @Output() public onUploadFinished = new EventEmitter();
+
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -42,8 +40,6 @@ export class BooksService {
 
   updateBook(book: Book): Observable<Book> {
     const url = `${this.booksUrl}/update`;
-    console.log(url);
-    console.log(book.id);
     return this.http.put<Book>(url, book);
   }
 
@@ -54,24 +50,16 @@ export class BooksService {
 
 
 
-  uploadBookImage() {
+  uploadBookImage(files: any): Observable<any> {
 
 
     let fileToUpload = <File>files[0];
     const formData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
 
-
     const url = `${this.booksUrl}/upload`;
-    this.http.post(url, formData, { reportProgress: true, observe: 'events' })
-      .subscribe(event => {
-        if (event.type === HttpEventType.UploadProgress)
-          this.progress = Math.round(100 * event.loaded / event.total);
-        else if (event.type === HttpEventType.Response) {
-          this.message = 'Upload success.';
-          this.onUploadFinished.emit(event.body);
-        }
-      });
+
+    return this.http.post(url, formData, { reportProgress: true, observe: 'events' });
   }
 
 }
