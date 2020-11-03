@@ -18,7 +18,8 @@ export class RegisterComponent implements OnInit {
     email: "",
     password: "",
     address: "",
-    isAdmin:false
+    isAdmin:false,
+    image: ""
   };
   password2 : string;
 

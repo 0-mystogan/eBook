@@ -14,5 +14,6 @@ namespace BookStore.Dal.ViewModel
         Task<UserViewModel> AddUser(UserDto userRegister, CancellationToken cancellationToken = default);
         Task<UserDto> LogInUser(UserLoginDto userLogin, CancellationToken cancellationToken = default);
         Task<UserDto> UpdateUser(UserDto user, CancellationToken cancellationToken = default);
+        Task<UserDto> UpdateImage(UserDto user, CancellationToken cancellationToken = default);
     }
 }

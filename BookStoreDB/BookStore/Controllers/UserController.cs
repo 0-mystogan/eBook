@@ -1,6 +1,9 @@
 ﻿using BookStore.Dal.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace BookStore.Controllers
@@ -40,6 +43,41 @@ namespace BookStore.Controllers
         {
             var User = await _userRepository.UpdateUser(user);
             return Ok(User);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateImg([FromBody] UserDto user)
+        {
+            var User = await _userRepository.UpdateImage(user);
+            return Ok(User);
+        }
+
+        [HttpPut, DisableRequestSizeLimit]
+        public IActionResult Upload()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                var folderName = Path.Combine("Resources", "Images");
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                if (file.Length > 0)
+                {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    var fullPath = Path.Combine(pathToSave, fileName);
+                    var dbPath = Path.Combine(folderName, fileName);
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+                    return Ok(new { dbPath });
+                }
+                else
+                    return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex}");
+            }
         }
     }
 

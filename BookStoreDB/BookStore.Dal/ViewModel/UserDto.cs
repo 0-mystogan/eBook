@@ -21,6 +21,7 @@ namespace BookStore.Dal.ViewModel
             Password = user.Password;
             Address = user.Address;
             isAdmin = user.IsAdmin;
+            Image = user.Image;
         }
 
         public int Id { get; set; }
@@ -30,5 +31,6 @@ namespace BookStore.Dal.ViewModel
         public string Password { get; set; }
         public string Address { get; set; }
         public bool isAdmin { get; set; }
+        public string Image { get; set; }
     }
 }
