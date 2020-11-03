@@ -4,10 +4,22 @@
          <div>
             
          </div>
-         <div><input class="form-control search-book" [(ngModel)]="searchName" type="text" name="search" placeholder="Search"
-            aria-label="Search" (keyup)="onSearchByName($event)">
+
+
+         <div>
+            <!-- <input class="form-control search-book" [(ngModel)]="searchName" type="text" name="search" placeholder="Search"
+            aria-label="Search" (keyup)="onSearchByName($event)"> -->
          </div>
-         <div></div>
+
+
+
+         <div>
+            <div class="container-search">
+               <input class="form-control search-book" [(ngModel)]="searchName" type="text" name="search" placeholder="Search"
+               aria-label="Search" (keyup)="onSearchByName($event)">
+               <div class="search"></div>
+             </div>
+         </div>
          
       </div>
       
