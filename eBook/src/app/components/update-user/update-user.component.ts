@@ -19,7 +19,8 @@ export class UpdateUserComponent implements OnInit {
     email: "",
     password: "",
     address: "",
-    isAdmin:false
+    isAdmin:false,
+    image: ""
   };
   password2 : string;
   password3 : string;

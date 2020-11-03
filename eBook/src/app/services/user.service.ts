@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../user.model';
 import { UserLogin } from '../userlogin.model';
-import { USERS } from '../users';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +14,6 @@ export class UserService {
 
   private userUrl = "https://localhost:44375/api/user";
 
-  users : User[] = USERS;
- 
-
   user : User = {
     id : 0,
     firstName: "",
@@ -25,7 +21,8 @@ export class UserService {
     email: "",
     password: "",
     address: "",
-    isAdmin: false
+    isAdmin: false,
+    image: ""
   }
 
   userlogin : UserLogin = {
