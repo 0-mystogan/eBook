@@ -7,7 +7,7 @@
                <div class="media align-items-end profile-header">
                 <form>
                    <div class="profile mr-3"> 
-                       <img src="{{userService.user.image}}" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                    <img *ngIf="userService.user.image != ''" src="{{userService.user.image}}" alt="..." width="130" class="rounded mb-2 img-thumbnail">
                     
                     <a  class="btn btn-dark text-white btn-sm btn-block" (click)="openForm(true)">Edit profile</a>
                     <a href="#" class="btn btn-danger btn-sm btn-block" (click)="logOut()">Log out</a>

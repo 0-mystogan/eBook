@@ -12,6 +12,7 @@ export class ProfileComponent implements OnInit {
   click : boolean;
   public progress: number;
   public message: string;
+  public img : string;
 
   constructor(public userService : UserService) { }
 
@@ -28,6 +29,7 @@ export class ProfileComponent implements OnInit {
     if(files.length === 0){
       return;
     }else {
+      console.log(files);
       this.userService.uploadProfileImage(files).subscribe(event => {
         if(event.type === HttpEventType.UploadProgress)
           this.progress = Math.round(100 * event.loaded / event.total);
@@ -38,9 +40,10 @@ export class ProfileComponent implements OnInit {
       });
     }
 
-    this.userService.user.image = `http://localhost:4200/Resources/Images/${files[0].name}`
-    console.log(this.userService.user);
-
-    this.userService.upadageImg(this.userService.user).subscribe(user => this.userService.user = user, error => console.log(error))
+    setTimeout(()=>{
+      this.userService.user.image = `https://localhost:44375/Resources/Images/${files[0].name}`
+      this.userService.upadageImg(this.userService.user).subscribe(user => this.userService.user = user, error => console.log(error))
+    }, 3000);
+    
   }
 }

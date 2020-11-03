@@ -52,7 +52,7 @@ namespace BookStore.Controllers
             return Ok(User);
         }
 
-        [HttpPut, DisableRequestSizeLimit]
+        [HttpPost, DisableRequestSizeLimit]
         public IActionResult Upload()
         {
             try
