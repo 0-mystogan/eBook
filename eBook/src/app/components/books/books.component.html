@@ -17,10 +17,10 @@
             <span class="book-author">{{book.author}}</span>
             <img src="{{book.image}}" class="book-image" >
             <p class="book-price">{{book.currrency}} {{book.price}}.00</p>
-            <button [ngClass]=" isAdmin ? 'delete-button' : 'hide' " (click)="deleteBook(book.id)">Delete book</button>
+            <button [ngClass]=" userService.user.isAdmin && userService.user.firstName != '' ? 'delete-button' : 'hide' " (click)="deleteBook(book.id)">Delete book</button>
          </div>
-         <div class="book-item" id="add-book" routerLink="/add">
-            <img src="../../../assets/plus.svg" class="add-book-img">
+         <div [ngClass]=" userService.user.isAdmin && userService.user.firstName != '' ? 'book-item' : 'hide'" id="add-book" routerLink="/add">
+            <img src="../../../assets/plus.svg" [ngClass]=" userService.user.isAdmin && userService.user.firstName != '' ? 'add-book-img' : 'hide'">
          </div>
       </div>
    </div>
