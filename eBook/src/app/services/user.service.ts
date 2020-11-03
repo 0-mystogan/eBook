@@ -52,10 +52,27 @@ export class UserService {
   updateUser(user : User) : Observable<User>{
     try {
       const url = `${this.userUrl}/update`;
-      console.log(user);
       return this.http.put<User>(url, user);
     } catch (err) {
       console.log(err.message);
     }
+  }
+  upadageImg(user : User) : Observable<User>{
+    try {
+      const url = `${this.userUrl}/updateimg`;
+      return this.http.put<User>(url, user);
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
+
+  uploadProfileImage(files: any): Observable<any> {
+    let fileToUpload = <File>files[0];
+    const formData = new FormData();
+    formData.append('file', fileToUpload, fileToUpload.name);
+
+    const url = `${this.userUrl}/upload`;
+
+    return this.http.post(url, formData, {reportProgress: true, observe: 'events'});
   }
 }

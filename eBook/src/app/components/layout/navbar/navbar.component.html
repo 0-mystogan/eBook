@@ -4,7 +4,8 @@
         
           <nav>
             <h3 class="H3" routerLink="/">Book Store</h3>
-            <a routerLink="/register">Register</a>
+            <a *ngIf="userService.user.firstName == ''" routerLink="/register">Register</a>
+            <a *ngIf="userService.user.firstName != ''" routerLink="/profile"><i class="fas fa-user"></i>  {{userService.user.firstName}}</a>
             <a routerLink="/books">Books</a>
             <a routerLink="/">Home</a>
           </nav>
