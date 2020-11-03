@@ -12,7 +12,7 @@ import { HttpEventType } from '@angular/common/http';
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
   styleUrls: ['./add-book.component.scss']
-})
+})  
 export class AddBookComponent implements OnInit {
 
   @Output() public onUploadFinished = new EventEmitter();
