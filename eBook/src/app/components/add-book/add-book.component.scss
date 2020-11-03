@@ -1,3 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+.add-book-container{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+
+}
+.add-book-form{
+    width: 50%;
+
+    .group-form{
+        width: 100%;
+        
+        label{
+            color: #858585;
+            font-size: 13px;
+            
+        }
+
+        input{
+            border: none;
+            border-bottom: 1px solid #c9c9c9;
+            width: 300px;
+        }
+    }
+}
+
+.add-book-preview{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.btn-container{
+    width: 100%;
+    margin-top: 20px;
+}
+.button-submit{
+    width: 150px;
+    border: 1px solid #c9c9c9;
+    cursor: pointer;
+    
+}
+textarea:focus, input:focus{
+    outline: none;
+    border-bottom: 1px solid #858585;
+}
+.add-book-text{
+    color: #858585;
+    font-size: 25px;
+}
+.add-book-underline{
+    position: relative;
+    left: 0;
+    background-color: #c9c9c9;
+    height: 1px;
+}
+
+.book-item{
+    border: 1px solid #bababa;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    
+ 
+    
+ 
+       
+    $cijena : #000000;
+    
+    .book-name{
+          font-family: 'Raleway', sans-serif;
+          font-weight: bold;
+          font-size: 25px;
+          margin-top: 15px;
+          
+       }
+       .book-author{
+          font-family: 'Raleway', sans-serif;
+          margin-top: 10px;
+       }
+       .book-image{
+          margin-top: 40px;
+          height: 250px;
+          width: 180px;
+          cursor: pointer;
+       }
+       .book-price{
+          font-family: 'Raleway', sans-serif;
+          font-weight: bold;
+          color: $cijena;
+          margin-top: 15px;
+          font-size: 17px;
+       }
+ }
 .upload{
     font-weight:bold;
     color:#28a745;
