@@ -1,0 +1,46 @@
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    z-index: 999;
+    background: rgba(50, 50, 50, 0.384);
+    box-shadow: 0 10px 20px rgba(50, 50, 50, 0.24);
+}
+
+nav {
+    margin-top: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+}
+
+nav a {
+    font: 1.2em/1em sans-serif;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    float: right;
+}
+.H3{
+    float: left;
+    color: white;
+    width: 40%;
+    margin-right: 0;
+    text-decoration: none;
+    outline: none;
+}
+@media only screen and (max-width: 600px){
+    header{
+    background: rgba(50, 50, 50, 0.384);
+    box-shadow: none;
+    }
+    
+}
