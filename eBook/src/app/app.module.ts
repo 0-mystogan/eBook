@@ -40,4 +40,4 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 
