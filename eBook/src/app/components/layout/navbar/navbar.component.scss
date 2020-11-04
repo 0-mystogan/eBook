@@ -1,9 +1,8 @@
 .wrapper {
-    margin: 0 auto;
+    margin: 0;
     width: 90%;
     cursor: pointer;
 }
-
 header {
     width: 100%;
     max-width: 100%;
@@ -33,7 +32,7 @@ nav a {
     float: left;
     color: white;
     width: 40%;
-    margin-right: 0;
+    padding-left: 2%;
     text-decoration: none;
     outline: none;
 }
@@ -42,5 +41,33 @@ nav a {
     background: rgba(50, 50, 50, 0.384);
     box-shadow: none;
     }
+    nav{
+        //display: flex;
+        flex-direction: column;
+        //padding-left: 33%;
+    }
+    .H3{
+        text-align: center;
+        margin-left: 15px;
+        width: 100%;
+    }
+    nav a{
+        //float: left;
+        display: inline;
+        //text-align: center;
+
+    }
+    // .burger-nav{
+    //     background-image: url("../../../../assets/burger-nav.png");
+
+    // }
+    // .wrapper{
+    //     height: 0;
+    //     overflow: hidden;
+    // }
+    // .open{
+    //     height: auto;
+
+    // }
     
 }
