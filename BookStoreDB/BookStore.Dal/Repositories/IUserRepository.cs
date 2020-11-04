@@ -1,5 +1,6 @@
 ﻿using BookStore.Dal.ViewModel;
 using BookStore.Domain;
+using BookStore.Filter;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,7 @@ namespace BookStore.Dal.ViewModel
         Task<UserDto> LogInUser(UserLoginDto userLogin, CancellationToken cancellationToken = default);
         Task<UserDto> UpdateUser(UserDto user, CancellationToken cancellationToken = default);
         Task<UserDto> UpdateImage(UserDto user, CancellationToken cancellationToken = default);
+        Task<UserDto> GetUserById(int id, CancellationToken cancellation = default);
+        Task<PageDto<ICollection<UserDto>>> GetAll(PaginationFilter filter, CancellationToken cancellation = default);
     }
 }

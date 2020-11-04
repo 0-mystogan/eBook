@@ -1,4 +1,5 @@
 ﻿using BookStore.Dal.ViewModel;
+using BookStore.Filter;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,12 +19,19 @@ namespace BookStore.Controllers
             _userRepository = userRepository;
         }
 
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var user = await _userRepository.GetUserById(id);
+            return Ok(user);
+        }
+
         [HttpGet]
-        //public async Task<IActionResult> Get()
-        //{
-        //    var users = await _userRepository.GetTopTen();
-        //    return Ok(users);
-        //}
+        public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)
+        {
+            var users = await _userRepository.GetAll(filter);
+            return Ok(users);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] UserDto user)
