@@ -1,6 +1,7 @@
 ﻿using BookStore.Dal.Context;
 using BookStore.Dal.ViewModel;
 using BookStore.Domain;
+using BookStore.Filter;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -70,6 +71,30 @@ namespace BookStore.Dal.ViewModel
             await _bookStoreDbContext.SaveChangesAsync(cancellationToken);
 
             return new UserViewModel(_user).User;
+        }
+
+        public async Task<UserDto> GetUserById(int id, CancellationToken cancellation = default)
+        {
+            var _user = await _bookStoreDbContext.Users.FirstOrDefaultAsync(u => u.Id == id);
+            return new UserViewModel(_user).User;
+        }
+
+        public async Task<PageDto<ICollection<UserDto>>> GetAll(PaginationFilter filter, CancellationToken cancellation = default)
+        {
+            var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
+            var pagedData = await _bookStoreDbContext.Users
+                .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+                .Take(validFilter.PageSize)
+                .ToListAsync();
+            var totalRecords = await _bookStoreDbContext.Users.CountAsync();
+            List<UserDto> listusers = new List<UserDto>();
+
+            ICollection<UserDto> userDto = new List<UserDto>();
+            foreach (var user in pagedData)
+            {
+                userDto.Add(new UserViewModel(user).User);
+            }
+            return new PageDto<ICollection<UserDto>>(userDto, validFilter.PageNumber, validFilter.PageSize);
         }
     }
 }
