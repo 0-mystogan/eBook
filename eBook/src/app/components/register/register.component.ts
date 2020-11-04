@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { error } from 'console';
-import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 import { MessageService } from 'src/app/services/message.service';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/user.model';
@@ -23,7 +21,7 @@ export class RegisterComponent implements OnInit {
   };
   password2 : string;
 
-  constructor(private userService : UserService, private messageService : MessageService) { }
+  constructor(private userService : UserService) { }
 
   ngOnInit(): void {
   } 
