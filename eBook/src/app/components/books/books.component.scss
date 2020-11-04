@@ -1,120 +1,99 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-.hide{
-   display: none;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+.hide {
+  display: none;
 }
 
-.home-book{
-   background-color: #ededed;
+.home-book {
+  background-color: #ededed;
 }
 
-.book-container{
-   display:grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   width: 80%;
-   margin: auto;
-   grid-column-gap: 40px;
-   grid-row-gap: 40px;
-   padding-top: 50px;
-   
-   
+.book-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding-top: 50px;
 }
-.search-container{
-   width: 80%;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   margin: auto;
-   grid-template-areas: "a b c";
-   grid-column-gap: 40px;
-   grid-row-gap: 40px;
-   
+.search-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  grid-template-areas: "a b c";
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
 
-
-   .search-book{
-   
-      grid-area: b;
-      margin-top: 50px;
-      
-      
-      
-   }
-   
+  .search-book {
+    grid-area: b;
+    margin-top: 50px;
+  }
 }
 
-.book-item{
-   border: 1px solid #bababa;
-   background-color: #e0e0e0;
-   border-radius: 5px;
-   height: 500px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   cursor: pointer;
-   
+.book-item {
+  border: 1px solid #bababa;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 
-   
+  $cijena: #000000;
 
-      
-   $cijena : #000000;
-   
-   .book-name{
-         font-family: 'Raleway', sans-serif;
-         font-weight: bold;
-         font-size: 25px;
-         margin-top: 15px;
-         
-      }
-      .book-author{
-         font-family: 'Raleway', sans-serif;
-         margin-top: 10px;
-      }
-      .book-image{
-         margin-top: 40px;
-         height: 250px;
-         width: 180px;
-         cursor: pointer;
-      }
-      .delete-button{
-         background-color: #4f4f4f;
-         color: #e3e3e3;
-         margin-top: 20px;
-         border: none;
-         border-radius: 10px;
-         width: 130px;
-         padding: 5px;
-         cursor: pointer;
-      }
-      .book-price{
-         font-family: 'Raleway', sans-serif;
-         font-weight: bold;
-         color: $cijena;
-         margin-top: 15px;
-         font-size: 17px;
-      }
-      
-      .add-book-img{
-         height: 150px;
-         width: 150px;
-         
-      }
-      
+  .book-name {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 15px;
+  }
+  .book-author {
+    font-family: "Raleway", sans-serif;
+    margin-top: 10px;
+  }
+  .book-image {
+    margin-top: 40px;
+    height: 250px;
+    width: 180px;
+    cursor: pointer;
+  }
+  .delete-button {
+    background-color: #4f4f4f;
+    color: #e3e3e3;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 130px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .book-price {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: $cijena;
+    margin-top: 15px;
+    font-size: 17px;
+  }
 
+  .add-book-img {
+    height: 150px;
+    width: 150px;
+  }
 }
-#add-book{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
-   
+#add-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.book-item:hover{
-   -webkit-box-shadow: -1px -2px 13px 0px rgba(0,0,0,0.56); 
-   box-shadow: -1px -2px 13px 0px rgba(0,0,0,0.56);
-   
+.book-item:hover {
+  -webkit-box-shadow: -1px -2px 13px 0px rgba(0, 0, 0, 0.56);
+  box-shadow: -1px -2px 13px 0px rgba(0, 0, 0, 0.56);
 }
 
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
-
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 
 .container-search {
   position: relative;
@@ -155,7 +134,7 @@
       height: 2px;
       background: white;
       transform: rotate(45deg);
-      transition: all .5s;
+      transition: all 0.5s;
     }
     &::after {
       content: "";
@@ -169,11 +148,11 @@
       height: 25px;
       border-radius: 50%;
       border: 2px solid white;
-      transition: all .5s;
+      transition: all 0.5s;
     }
   }
   input {
-    font-family: 'Inconsolata', monospace;
+    font-family: "Inconsolata", monospace;
     position: relative;
     margin: auto;
     top: 0;
@@ -190,8 +169,7 @@
     text-shadow: 0 0 10px #d1d1d1;
     padding: 0 80px 0 20px;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 #636363,
-                0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 25px 0 #636363, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
     // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
     transition: all 1s;
     opacity: 0;
@@ -217,7 +195,7 @@
         width: 25px;
       }
       &::after {
-        top: 0;;
+        top: 0;
         left: 0;
         width: 25px;
         height: 2px;

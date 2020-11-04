@@ -19,7 +19,7 @@
 
 <div class="container">
     <h3>Update Book</h3>
-    <form  [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <form  [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value,file.files)">
       <div class="form-group">
           <label>Name</label>
           <input class="form-control" type="text" name="name" [(ngModel)]="book.name" formControlName = "name"placeholder={{book.name}}>
@@ -40,10 +40,23 @@
     <label>Currency</label>
     <input class="form-control" type="text" name="currrency" [(ngModel)]="book.currrency" formControlName = "currrency" placeholder={{book.currrency}}>
  </div>
- <div class="form-group">
+ <div class="group-form">
     <label>Image</label>
-    <input class="form-control" type="text" name="image" [(ngModel)]="book.image" formControlName = "image" placeholder={{book.image}}>
- </div>
+    <div class="row" style="margin-bottom:15px;">
+      <div class="col-md-3">
+        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+        <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+      </div>
+      <div class="col-md-4">
+        <span class="upload" *ngIf="progress > 0">
+          {{progress}}%
+        </span>
+        <span class="upload" *ngIf="message">
+          {{message}}
+        </span>
+      </div>
+    </div>
+  </div>
  <div class="form-group">
     <label>Quantity</label>
     <input class="form-control" type="number" name="quantity" [(ngModel)]="book.quantity" formControlName = "quantity" placeholder={{book.quantity}}>
