@@ -17,6 +17,6 @@ namespace BookStore.Dal.ViewModel
         Task<UserDto> UpdateUser(UserDto user, CancellationToken cancellationToken = default);
         Task<UserDto> UpdateImage(UserDto user, CancellationToken cancellationToken = default);
         Task<UserDto> GetUserById(int id, CancellationToken cancellation = default);
-        Task<PageDto<ICollection<UserDto>>> GetAll(PaginationFilter filter, CancellationToken cancellation = default);
+        Task<PageDto<List<UserDto>>> GetAll(PaginationFilter filter, string route, CancellationToken cancellation = default);
     }
 }

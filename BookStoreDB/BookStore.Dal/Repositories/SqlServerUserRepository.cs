@@ -1,4 +1,6 @@
 ﻿using BookStore.Dal.Context;
+using BookStore.Dal.Helper;
+using BookStore.Dal.Repositories;
 using BookStore.Dal.ViewModel;
 using BookStore.Domain;
 using BookStore.Filter;
@@ -16,9 +18,11 @@ namespace BookStore.Dal.ViewModel
     public class SqlServerUserRepository : IUserRepository
     {
         private readonly BookStoreDbContext _bookStoreDbContext;
-        public SqlServerUserRepository(BookStoreDbContext bookStoreDbContext)
+        private readonly IUriRepository _uriRepostory;
+        public SqlServerUserRepository(BookStoreDbContext bookStoreDbContext, IUriRepository uriRepository)
         {
             _bookStoreDbContext = bookStoreDbContext;
+            _uriRepostory = uriRepository;
         }
 
         public async Task<UserViewModel> AddUser(UserDto userRegister, CancellationToken cancellationToken = default)
@@ -79,7 +83,7 @@ namespace BookStore.Dal.ViewModel
             return new UserViewModel(_user).User;
         }
 
-        public async Task<PageDto<ICollection<UserDto>>> GetAll(PaginationFilter filter, CancellationToken cancellation = default)
+        public async Task<PageDto<List<UserDto>>> GetAll(PaginationFilter filter, string route,CancellationToken cancellation = default)
         {
             var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
             var pagedData = await _bookStoreDbContext.Users
@@ -87,14 +91,15 @@ namespace BookStore.Dal.ViewModel
                 .Take(validFilter.PageSize)
                 .ToListAsync();
             var totalRecords = await _bookStoreDbContext.Users.CountAsync();
-            List<UserDto> listusers = new List<UserDto>();
 
-            ICollection<UserDto> userDto = new List<UserDto>();
+            
+            
+            List<UserDto> userDto = new List<UserDto>();
             foreach (var user in pagedData)
             {
                 userDto.Add(new UserViewModel(user).User);
             }
-            return new PageDto<ICollection<UserDto>>(userDto, validFilter.PageNumber, validFilter.PageSize);
+            return PaginationHelper.CreatePagedReponse<UserDto>(userDto, validFilter, totalRecords, _uriRepostory, route);
         }
     }
 }

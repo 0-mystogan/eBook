@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wKtzd/MJJgmEUIT1SZbdnotNym7nBFhJ7cEA45dwnKQkKMbH5dM029uapqTrHBZ4qES2ysxNOQbNTUFLGULoHQ==",
+  "dgSpecHash": "huoQGyyy1XMn+wRWuCYSIJB3fg93GEDej5DUcY1W9o5XcAdKVwlYAFDFPaPFfBUq2iA56OKc2+fRPumDdnybjg==",
   "success": true,
   "projectFilePath": "I:\\InfinityMesh\\eBook\\BookStoreDB\\BookStore.Dal\\BookStore.Dal.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\yasir\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\yasir\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\yasir\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\yasir\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\yasir\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\yasir\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\yasir\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

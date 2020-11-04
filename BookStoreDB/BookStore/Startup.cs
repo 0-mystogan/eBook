@@ -41,6 +41,15 @@ namespace BookStore
             services.AddScoped<IUserRepository, SqlServerUserRepository>();
             services.AddScoped<IOrderRepository, SqlServerOrderRepository>();
             services.AddScoped<IBookRepository, SqlServerBookRepository>();
+
+            services.AddHttpContextAccessor();
+            services.AddSingleton<IUriRepository>(o =>
+            {
+                var accessor = o.GetRequiredService<IHttpContextAccessor>();
+                var request = accessor.HttpContext.Request;
+                var uri = string.Concat(request.Scheme, "://", request.Host.ToUriComponent());
+                return new UriRepository(uri);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
