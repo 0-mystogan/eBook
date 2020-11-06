@@ -58,6 +58,7 @@ namespace BookStore.Dal.ViewModel
             updateUser.Address = user.Address;
             updateUser.Email = user.Email;
             updateUser.Password = user.Password;
+            updateUser.IsAdmin = user.isAdmin;
 
             _bookStoreDbContext.Users.Update(updateUser);
             await _bookStoreDbContext.SaveChangesAsync(cancellationToken);

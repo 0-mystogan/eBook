@@ -6,6 +6,8 @@ import { HomeComponent } from './components/layout/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserService } from './services/user.service';
 
 
 const routes: Routes = [
@@ -26,6 +28,9 @@ const routes: Routes = [
    },
    {
       path: 'add', component: AddBookComponent
+   },
+   {
+      path: 'users', component: UsersComponent
    },
 ];
 

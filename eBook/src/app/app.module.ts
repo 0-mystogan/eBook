@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 
@@ -28,7 +29,8 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     LoginComponent,
     ProfileComponent,
     AddBookComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

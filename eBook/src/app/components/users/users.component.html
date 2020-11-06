@@ -1,0 +1,24 @@
+<div *ngIf="page != undefined">
+   <nav aria-label="Page navigation example" style="padding: 70px;" class="pagination pg-blue">
+      <li class="page-item ">
+         <a class="page-link" (click)="setUrl(page.firstPage)">Go to first</a>
+       </li>
+      <li class="page-item ">
+         <a class="page-link" (click)="setUrl(page.previousPage)">Previous</a>
+       </li>
+      <div
+        *ngFor="let page of fakeArray(page.totalPages);let i = index">
+         <li class="page-item"><a class="page-link" (click)="setPageNumber(i+1)">{{i+1}}</a></li>
+      </div>
+      <li class="page-item">
+         <a class="page-link btn" (click)="setUrl(page.nextPage)">Next</a>
+      </li>
+      <li class="page-item">
+         <a class="page-link btn" (click)="setUrl(page.lastPage)">Go to last</a>
+      </li>
+   </nav>
+   <div *ngFor="let user of page.data">
+      <img *ngIf="user.image != null" src="{{user.image}}" class="img-responsive img-rounded" style="max-height: 70px; max-width: 70px;" alt="Profile picture">   {{user.firstName}} {{user.lastName}}
+      <input *ngIf="user.isAdmin" type="checkbox" checked (click)="setAdmin(!user.isAdmin, user)"> <input *ngIf="!user.isAdmin" type="checkbox" (click)="setAdmin(!user.isAdmin, user)"> 
+   </div>
+</div>
